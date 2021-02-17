@@ -1,0 +1,55 @@
+@import '../../../variables.scss';
+
+.home__container {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.home__landing {
+    align-items: center;
+    background-image: url('../../../assets/images/hero.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+}
+
+.home__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home__eyebrow {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.home__title {
+    color: $color-pink;
+    font-size: 120px;
+    font-weight: 600;
+}
+
+.home__subtitle {
+    color: $color-purple-light;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.home__sections {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+}

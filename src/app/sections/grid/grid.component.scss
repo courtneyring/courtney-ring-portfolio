@@ -1,0 +1,41 @@
+@import '../../../variables.scss';
+
+:host {
+    background-color: $color-grey;
+}
+
+.section__title {
+    color: black;
+}
+
+.section__subtitle {
+    color: $color-purple-dark;
+}
+
+.section__divider {
+    border-color: $color-purple-light;
+}
+
+$block-edge: 350px;
+$block-margin: 15px;
+
+.section__grid {
+    // align-self: center;
+    align-items: center;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+    width: 100%;
+}
+
+
+.section__block {
+    background-color: $color-pink;
+    background-size: cover;
+    background-position: center;
+    height: $block-edge;
+    margin: $block-margin;
+    width: $block-edge;
+}

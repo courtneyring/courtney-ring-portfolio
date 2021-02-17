@@ -1,0 +1,41 @@
+@import '../../../variables.scss';
+
+:host {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+.promo__image {
+    border: 10px solid #f9225b;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    padding: 15%;
+    width: 50%;
+}
+
+.promo__icon {
+    width: 100%;
+}
+
+.promo__title {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 20px ;
+    text-transform: uppercase;
+}
+
+.promo__list {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.promo__body {
+    color: white;
+    font-size: 14px;
+    line-height: 24px;
+}
+

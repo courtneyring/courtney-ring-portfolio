@@ -1,0 +1,15 @@
+<div class='navbar__bar' [style.background]='barBackground'>
+    <div class='navbar__logo'>CR</div>
+    <div class='navbar__toggle' (click)='menuIsOpen = !menuIsOpen' [ngClass]='{open: menuIsOpen}'>
+        <div class='navbar__line'></div>
+        <div class='navbar__line'></div>
+        <div class='navbar__line'></div>
+    </div>
+
+</div>
+
+<div class='navbar__menu' [ngClass]='{open: menuIsOpen}'>
+    <div class='navbar__links'>
+        <div class='navbar__link' *ngFor='let link of links'>{{link.label}}</div>
+    </div>
+</div>

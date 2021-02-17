@@ -1,0 +1,106 @@
+@import '../../../variables.scss';
+
+.navbar__bar {
+    align-items: center;
+    background-color: $color-blue-medium;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar__logo {
+    color: white;
+    z-index: 3;
+}
+
+.navbar__toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    z-index: 3;
+}
+
+.navbar__line {
+    background-color: white;
+    height: 2px;
+    transform: rotate(0deg);
+    opacity: 1;
+    width: 30px;
+
+    transition: all 1s ease;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.navbar__toggle.open {
+
+    & > .navbar__line:first-child {
+        transform: rotate(45deg);
+        transform-origin: left top;
+        width: 28px;
+    }
+
+    & > .navbar__line:nth-child(2) {
+        opacity: 0;
+        width: 0px;
+    }
+
+    & > .navbar__line:last-child {
+        transform: rotate(-45deg);
+        transform-origin: left bottom;
+        width: 28px;
+    }
+}
+
+.navbar__menu {
+    align-items: center;
+    background-color: $color-blue-medium;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: -1000%;
+    width: 100%;
+    z-index: 2;
+
+    transition: opacity 0.4s ease, top 0s ease 0.4s;
+
+    &.open {
+        opacity: 1;
+        top: 0;
+
+        transition: top 0s ease,  opacity 0.4s ease ;
+    }
+}
+
+.navbar__links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar__link {
+    color: $color-white;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-bottom: 40px;
+
+    &.active {
+        color: $color-pink;
+    }
+}

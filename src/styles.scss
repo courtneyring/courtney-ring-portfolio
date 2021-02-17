@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import './variables.scss';
+
+@font-face {
+    font-family: Montserrat;
+    src: url('./assets/fonts/montserrat/Montserrat-Light.ttf') format("opentype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('./assets/fonts/montserrat/Montserrat-Regular.ttf') format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('./assets/fonts/montserrat/Montserrat-Medium.ttf') format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('./assets/fonts/montserrat/Montserrat-Bold.ttf') format("opentype");
+    font-weight: 700;
+}
+
+body {
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Montserrat, Arial, Helvetica, sans-seri
+}
+
+p {
+    margin-top: 0px;
+}
+
+.btn {
+    align-items: center;
+    background-color: $color-pink;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: center;
+    letter-spacing: 4px;
+    padding: 15px 30px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: white;
+        color: $color-pink;
+        cursor: pointer;
+    }
+}

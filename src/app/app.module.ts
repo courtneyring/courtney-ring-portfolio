@@ -9,6 +9,7 @@ import { SectionTextComponent } from './sections/text/text.component';
 import { SectionGridComponent } from './sections/grid/grid.component';
 import { SectionPromosComponent } from './sections/promos/promos.component';
 import { PromoComponent } from './components/promo/promo.component';
+import { SectionContactComponent } from './sections/contact/contact.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PromoComponent } from './components/promo/promo.component';
     SectionTextComponent,
     SectionGridComponent,
     SectionPromosComponent,
-    PromoComponent
+    PromoComponent,
+    SectionContactComponent
   ],
   imports: [
     BrowserModule,

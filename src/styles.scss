@@ -56,3 +56,11 @@ p {
         cursor: pointer;
     }
 }
+
+a {
+    color: white;
+
+    &:hover {
+        color: $color-purple-light
+    }
+}

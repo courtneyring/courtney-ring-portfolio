@@ -20,4 +20,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           branch: production # The branch the action should deploy to.
-          folder: dist/courtney-ring-portfolio # The folder the action should deploy.
+          folder: dist
+          # The folder the action should deploy.

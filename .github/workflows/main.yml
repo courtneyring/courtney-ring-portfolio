@@ -21,4 +21,4 @@ jobs:
         with:
           branch: production 
           folder: dist/courtney-ring-portfolio
-          commit-mesage: Deploying ${{ steps.vars.outputs.sha_short }} to production
+          commit-message: Deploying ${{ steps.vars.outputs.sha_short }} to production

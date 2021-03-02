@@ -7,9 +7,9 @@
 }
 
 .home__landing {
-    align-items: center;
+    align-items: flex-start;
     background-image: url('../../../assets/images/hero.png');
-    background-position: center;
+    background-position: 81% 0%;
     background-size: cover;
     display: flex;
     height: 100%;
@@ -23,27 +23,29 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 30%;
 }
 
 .home__eyebrow {
-    color: white;
-    font-size: 25px;
+    color: $color-blue-medium;
+    font-size: 18px;
     font-weight: 600;
-    letter-spacing: 6px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
 .home__title {
     color: $color-pink;
-    font-size: 120px;
+    font-size: 40px;
     font-weight: 600;
 }
 
 .home__subtitle {
-    color: $color-purple-light;
+    color: $color-white;
     font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 6px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -52,4 +54,24 @@
     flex-direction: column;
     position: relative;
     z-index: 3;
+}
+
+
+@media(min-width: 768px) {
+    .home__eyebrow {
+        font-size: 25px;
+        letter-spacing: 6px;
+    }
+    .home__title {
+        font-size: 120px;
+    }
+
+    .home__landing {
+        align-items: center;
+        background-position: center;
+    }
+
+    .home__content {
+        margin-top: 0px;
+    }
 }

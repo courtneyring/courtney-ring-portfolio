@@ -1,0 +1,73 @@
+@import '../../../variables.scss';
+
+.block__content {
+    display: flex;
+}
+
+.block__info {
+    align-items: center;
+    background-color: $color-blue-medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 100px;
+    width: 100%;
+}
+
+
+.block__block {
+    width: 50%;
+}
+
+.block__title {
+    align-self: flex-start;
+    color: white;
+    font-size: 46px;
+    font-weight: 600;
+    
+    margin-bottom: 50px;
+}
+
+.section__heading {
+    height: 30vh;
+}
+
+//same as .section__body
+.block__body {
+    color: $color-purple-light;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.block__box {
+    background-color: $color-blue-dark;
+    border: 1px solid rgb(46, 49, 58);
+    padding: 30px;
+}
+
+.block__fact {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.block__label, .block__value {
+    width: 50%;
+}
+
+.block__label {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.block__value {
+    color: #555c6e;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.btn {
+    margin-top: 50px;
+}

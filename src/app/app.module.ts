@@ -10,6 +10,8 @@ import { SectionGridComponent } from './sections/grid/grid.component';
 import { SectionPromosComponent } from './sections/promos/promos.component';
 import { PromoComponent } from './components/promo/promo.component';
 import { SectionContactComponent } from './sections/contact/contact.component';
+import { WorkComponent } from './pages/work/work.component';
+import { SectionBlockComponent } from './sections/block/block.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { SectionContactComponent } from './sections/contact/contact.component';
     SectionGridComponent,
     SectionPromosComponent,
     PromoComponent,
-    SectionContactComponent
+    SectionContactComponent,
+    WorkComponent,
+    SectionBlockComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@
         <div class='section__divider'></div>
     </div>
     <div class='section__grid'>
-        <div class='section__block' *ngFor='let block of blocks' [style.backgroundImage]='"url(/assets/images/" + block.image + ")"'></div>
+        <div class='section__block' *ngFor='let block of blocks' [style.backgroundImage]='"url(/assets/images/" + block.tile + ")"' (click)='transitionToWork(block.id)'></div>
     </div>
     <div class='btn'>View All Work</div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
@@ -17,10 +18,14 @@ export class NavbarComponent implements OnInit {
         {label: 'Let\'s Talk', path: ''}
     ]
 
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit(): void {
         this.onScroll();
+    }
+
+    navigateHome() {
+        this.router.navigate(['/'])
     }
 
     @HostListener('window:scroll', ['$event'])

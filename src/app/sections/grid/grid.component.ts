@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-section-grid',
-  templateUrl: './grid.component.html',
-  styleUrls: ['../section.component.scss', './grid.component.scss']
+    selector: 'app-section-grid',
+    templateUrl: './grid.component.html',
+    styleUrls: ['../section.component.scss', './grid.component.scss']
 })
 export class SectionGridComponent implements OnInit {
 
@@ -11,9 +12,14 @@ export class SectionGridComponent implements OnInit {
     @Input() subtitle;
     @Input() blocks;
 
-  constructor() { }
+    constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        console.log
+    }
+
+    transitionToWork(id) {
+        this.router.navigate([`work/${id}`])
+    }
 
 }

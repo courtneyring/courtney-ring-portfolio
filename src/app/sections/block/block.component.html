@@ -28,7 +28,7 @@
                     <div class='block__value'>{{content.client}}</div>
                 </div>
                 
-                <div class='btn' href='{{content.ctaLink}}'>{{content.ctaText}}</div>
+                <div class='btn' (click)='window.open(content.ctaLink, "_blank")'>{{content.ctaText}}</div>
             </div>
             
         </div>

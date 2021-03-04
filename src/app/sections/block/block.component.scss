@@ -17,6 +17,14 @@
 
 .block__block {
     width: 50%;
+
+    &:first-child {
+        padding-right: 20px;
+    }
+
+    &:last-child {
+        padding-left: 20px;
+    }
 }
 
 .block__title {

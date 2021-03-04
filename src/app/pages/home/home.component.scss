@@ -1,5 +1,24 @@
 @import '../../../variables.scss';
 
+.section {
+
+    &#about {
+        background-color: $color-blue-medium;
+    }
+
+    &#portfolio {
+        background-color: $color-grey;
+    }
+
+    &#skills {
+        background-color: $color-blue-dark;
+    }
+
+    &#contact {
+        background-color: $color-blue-light;
+    }
+
+}
 
 
 .home__container {
@@ -59,18 +78,24 @@
     z-index: 3;
 }
 
-.section {
 
-    &#about {
-        background-color: $color-blue-medium;
-    }
-
-    &#portfolio {
-        background-color: $color-grey;
-    }
-
+.home__promos {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
+app-promo {
+    flex-grow: 1;
+}
+
+// .section__body {
+//     align-self: center;
+//     margin-bottom: 80px;
+//     max-width: 70%;
+    
+// }
 
 
 .home__body {
@@ -108,6 +133,12 @@
     .home__body {
         column-count: 2;
         column-gap: 40px;
+    }
+
+    .home__skills {
+        column-count: 1;
+        column-gap: 0px;
+        margin-bottom: 80px;
     }
 
     .home__eyebrow {

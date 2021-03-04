@@ -21,6 +21,8 @@ export class WorkComponent implements OnInit {
        this.content = work.find((project) => project.id == this.id)
     }
 
-
+    openLink() {
+        window.open(this.content.ctaLink, '_blank');
+    }
 
 }

@@ -1,2 +1,39 @@
 <div class='work__hero' [style.backgroundImage]='"url(/assets/images/" + content.hero + ")"'></div>
-<app-section-block [content]='content' [title]='content.title' [subtitle]='content.subtitle'></app-section-block>
+<!-- <app-section-block [content]='content' [title]='content.title' [subtitle]='content.subtitle'></app-section-block> -->
+<div class='section' id='content'>
+    <div class='section__container'>
+        <app-header [title]='content.title' [subtitle]='content.subtitle'></app-header>
+    
+        <div class='work__content'>
+            <div class='work__block'>
+                <div class='work__body' [innerHTML]='content.body'></div>
+            </div>
+            <div class='work__block'>
+                <div class='work__box'>
+                    <div class='work__fact' *ngIf='content.role'>
+                        <div class='work__label'>Role</div>
+                        <div class='work__value'>{{content.role}}</div>
+                    </div>
+                    <div class='work__fact'>
+                        <div class='work__label'>Skills Needed</div>
+                        <div class='work__value'>{{content.skills}}</div>
+                    </div>
+                    <div class='work__fact' *ngIf='content.employer'>
+                        <div class='work__label'>Employer</div>
+                        <div class='work__value'>{{content.employer}}</div>
+                    </div>
+                    <div class='work__fact' *ngIf='content.client'>
+                        <div class='work__label'>Client</div>
+                        <div class='work__value'>{{content.client}}</div>
+                    </div>
+                    
+                    <div class='btn' (click)='openLink()'>{{content.ctaText}}</div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    
+
+</div>

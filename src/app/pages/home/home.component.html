@@ -28,8 +28,21 @@
 
 
     <!------------------ Skills ------------------->
-    <!-- <app-section-promos [title]='"Why Work With Me"' [subtitle]='"development • devops • content management"' [promos]='skillAreas'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</app-section-promos> -->
 
+
+    <!-- <div class='section' id='skills'>
+        <div class='section__container'>
+            <app-header [title]='"Why Work With Me"' [subtitle]='"development • devops • content management"'></app-header>
+            <div class='home__body home__skills'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+            </div>
+            <div class='home__promos'>
+                <app-promo *ngFor='let promo of skillAreas' [content]='promo'></app-promo>
+            </div>
+
+        </div>
+        
+    </div> -->
 
     <!------------------ Portfolio ------------------->
     <div class='section' id='portfolio'>
@@ -38,12 +51,23 @@
             <div class='home__grid'>
                 <img class='home__tile' *ngFor='let block of work' src='/assets/images/{{block.tile}}' (click)='transitionToWork(block.id)' />
             </div>
-            <div class='btn'>View All Work</div>
+            <!-- <div class='btn'>View All Work</div> -->
         </div>
         
     </div>
 
     <!------------------ Contact ------------------->
-    <!-- <app-section-contact [title]='"Let&apos;s Work Together"' [subtitle]='"Tell me more about your project"'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliq</app-section-contact> -->
+    <!-- <div class='section' id='contact'>
+        <app-header [title]='"Let&apos;s Work Together"' [subtitle]='"Tell me more about your project"' class='dark'></app-header>
+        <div class='section__body'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliq
+        </div>
+        <div class='section__form'>
+            <input class='section__input' placeholder='Name'/>
+            <input class='section__input' placeholder='Email'/>
+            <input class='section__input' placeholder='Phone'/>
+        </div>
+       
+    </div> -->
 
 </div>

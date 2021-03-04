@@ -78,6 +78,23 @@ a {
     max-width: 1200px;
 }
 
+.section__form {
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.section__input {
+    border: 0px;
+    outline: none;
+
+    &::placeholder {
+        
+        text-transform: uppercase;
+    }
+}
+
 @media(min-width: 768px) {
     .section {
         padding: 50px 50px;
@@ -87,7 +104,7 @@ a {
 
 @media(min-width: 992px) {
     .section {
-        padding: 50px 100px;
+        padding: 150px 100px;
     }
 }
 

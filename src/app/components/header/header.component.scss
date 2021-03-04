@@ -1,0 +1,61 @@
+@import '../../..//variables.scss';
+
+:host {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.header__title {
+    color: white;
+    font-size: 28px; 
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.header__subtitle {
+    color: $color-purple-dark;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.header__divider {
+    border-top: 1px solid $color-white;
+    margin-bottom: 40px;
+    width: 120px;
+}
+
+:host.dark {
+
+    .header__title {
+        color: black;
+    }
+
+    .header__subtitle {
+        color: $color-purple-dark;
+    }
+
+    .header__divider {
+        border-color: $color-purple-light;
+    }
+
+
+
+}
+
+@media(min-width: 768px) {
+    .header__title {
+        font-size: 46px;
+    }
+
+    .header__divider {
+        margin-bottom: 80px;
+    }
+}

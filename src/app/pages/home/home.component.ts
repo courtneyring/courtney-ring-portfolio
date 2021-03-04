@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import work from '../../../assets/json/work.json';
 
 @Component({
@@ -28,48 +29,14 @@ export class HomeComponent implements OnInit {
         }, 
     ]
 
-    recentWork = [
-        {
-            title: 'Aptiv SVA Virtual Tool', 
-            image: 'placeholder.jpg',
-            path: '/'
 
-        },
-        {
-            title: 'Cigna Hong Kong', 
-            image: 'placeholder2.jpg',
-            path: '/'
-
-        },
-        {
-            title: 'Tracer', 
-            image: 'placeholder3.jpg',
-            path: '/'
-
-        },
-        {
-            title: 'Open Saudi', 
-            image: 'placeholder3.jpg',
-            path: '/'
-
-        },
-        {
-            title: 'Open Saudi', 
-            image: 'placeholder.jpg',
-            path: '/'
-
-        },
-        {
-            title: 'Open Saudi', 
-            image: 'placeholder2.jpg',
-            path: '/'
-
-        },
-    ]
-
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit(): void {
+    }
+
+    transitionToWork(id) {
+        this.router.navigate([`work/${id}`])
     }
 
 }

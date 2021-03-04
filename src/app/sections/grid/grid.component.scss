@@ -16,8 +16,7 @@
     border-color: $color-purple-light;
 }
 
-$block-edge: 350px;
-$block-margin: 15px;
+
 
 .section__grid {
     // align-self: center;
@@ -35,7 +34,31 @@ $block-margin: 15px;
     background-color: $color-pink;
     background-size: cover;
     background-position: center;
-    height: $block-edge;
-    margin: $block-margin;
-    width: $block-edge;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+    .section__block {
+        
+        width: calc(50% - 15px);
+
+        &:nth-child(even) {
+            margin-left: 15px;
+        }
+
+        &:nth-child(odd) {
+            margin-right: 15px;
+        }
+    }
+
+}
+
+@media(min-width: 992px) {
+    .section__block {
+        height: 350px;
+        margin: 15px;
+        width: 350px;
+    }
+    
 }

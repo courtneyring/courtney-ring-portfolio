@@ -5,6 +5,13 @@
 .work__hero {
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    height: 60vh;
     width: 100%;
+}
+
+@media(min-width: 768px) {
+
+    .work__hero {
+        height: 70vh;
+    }
 }

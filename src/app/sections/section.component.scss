@@ -18,9 +18,10 @@
 
 .section__title {
     color: white;
-    font-size: 46px;
+    font-size: 28px;
     font-weight: 600;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .section__subtitle {
@@ -35,7 +36,7 @@
 
 .section__divider {
     border-top: 1px solid $color-white;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     width: 120px;
 }
 
@@ -48,6 +49,20 @@
 }
 
 @media(min-width: 768px) {
+    .section {
+        padding: 50px 50px;
+    }
+
+    .section__title {
+        font-size: 46px;
+    }
+
+    .section__divider {
+        margin-bottom: 80px;
+    }
+}
+
+@media(min-width: 992px) {
     .section {
         padding: 50px 100px;
     }

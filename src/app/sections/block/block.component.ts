@@ -16,4 +16,8 @@ export class SectionBlockComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    openLink() {
+        window.open(this.content.ctaLink, '_blank');
+    }
+
 }

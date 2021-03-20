@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PromoComponent } from './components/promo/promo.component';
 import { WorkComponent } from './pages/work/work.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HeaderComponent } from './components/header/header.component';
     HomeComponent,
     PromoComponent,
     WorkComponent,
-    HeaderComponent
+    HeaderComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

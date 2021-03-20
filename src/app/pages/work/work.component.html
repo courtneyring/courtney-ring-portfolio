@@ -32,8 +32,21 @@
                 
             </div>
         </div>
+        
 
     </div>
     
 
+</div>
+
+<div *ngFor='let section of content.sections' [style.backgroundColor]='section.backgroundColor' class='section'>
+    <div *ngIf='section.layout == "image"' class='work__section--image'>
+        <img src='{{section.image}}' />
+    </div>
+
+    <div *ngIf='section.layout == "image-text"' class='work__section--imagetext'>
+        <img src='{{section.image}}' #gif />
+        <div class='work__text' [innerHTML]='section.text'></div>
+        
+    </div>
 </div>

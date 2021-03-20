@@ -88,6 +88,33 @@
     margin-top: 50px;
 }
 
+.work__section--image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.work__section--imagetext {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > img {
+        height: auto;
+        width: 60%;
+    }
+
+    & > .work__text {
+        @extend .work__body;
+        color: black;
+        width: 36%;
+    }
+}
+
 @media(min-width: 768px) {
     $hero-height: 70;
 

@@ -5,12 +5,30 @@
         "tile": "work-tracer-tile.jpg",
         "title": "Tracer", 
         "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te",
-        "body": "Tracer is a marketing data and reporting platform used to aggregate advertising spending across social platforms. The application is not only used to generate reports and track spending, but can also be used for budget allocation, external data, ad verification, and custom formulas. As a front end developer on the team, my primary role is to use mocks, technical requirements, and business requirements to code the user interface. Using Ember.js as our framework, I pull data from the database using models and custom Ajax calls to the backend. The data is then bound to the frontend templates using handlebars for templating and sass for styling. Since I started on the team, we have moved from being an internal application to offering services to external clients in a range of industries. Our first client was on boarded in October 2018 and the team continues to move toward acquiring new clients. ", 
+        "body": "<p>Tracer is a data aggregation and reporting tool used to help marketers analyze their ad campaigns and media spending strategies across platforms.  It specializes in creating highly customizable reports and gives clients greater clarity on where they should be investing and why. In addition to reporting, Tracer also offers a variety of additional features including ad verification, offline data conversions, custom labeling, and analytics integration.</p><p>To date, Tracer has tracked over one billion in spending across 50 brands globally. Their client base includes Mondelēz International, Chase, and Sanofi, most of whom receive consultation services for additional analysis and support. The team continues to improve the tool, remaining a front runner in the adtech landscape.</p>", 
         "skills": "Ember.js, CoffeeScript, SASS",
         "employer": "Tracer, a VaynerX Company", 
         "ctaLink": "http://tracer.tech", 
         "ctaText": "View Marketing Site", 
-        "role": "Frontend Developer"
+        "role": "Frontend Developer", 
+        "sections": [
+            {
+                "layout": "image",
+                "image": "./assets/images/work-tracer-image.png", 
+                "backgroundColor": "#7A89AB"
+            },
+            {
+                "layout": "image-text",
+                "image": "./assets/gifs/tracer-report.gif",
+                "text": "Tracer uses three strategies to set it apart from the adtech industry. First, it puts the client’s data sources all in one place. It interfaces with most top ad buying platforms (20 different platforms in total) including Google Ads, Facebook, LinkedIn, Pinterest, and Snapchat. This allows for greater transparency of cross-platform media performance and eliminates the tedious task of aggregating data manually. Second, it allows the user to create automated rules and configurations to define how this data is combined and organized. This gives greater control over the resulting reports and draws attention to numbers that matter most. Lastly, the resulting reports are made in a way that is actionable and impactful, as well as flexible to use across a variety of visualization tools such as Chartio, Looker, and Tableau.", 
+                "backgroundColor": "#EBECED"
+            },
+            {
+                "layout": "image",
+                "image": "./assets/images/work-tracer-mockup.png", 
+                "backgroundColor": "#20232C"
+            }
+        ]
     },
     {
         "id": "aaum",

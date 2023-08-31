@@ -1,18 +1,12 @@
 <script>
   import { Header, ImageGrid } from '../components/index.js';
-  import * as content from '../assets/json/landing.json';
+  import content from '$lib/json/landing.json';
+  import portfolio from '$lib/json/portfolio.json';
+  const tiles = portfolio.map((project) => {
+    let {title, id} = project;
+    return {title, id}
+  })
 
-
-  const tiles = [
-    { title: 'test', image: 'https://placehold.co/400x400' },
-    { title: 'test', image: 'https://placehold.co/400x400' },
-    { title: 'test', image: 'https://placehold.co/400x400' },
-    { title: 'test', image: 'https://placehold.co/400x400' },
-    { title: 'test', image: 'https://placehold.co/400x400' },
-    { title: 'test', image: 'https://placehold.co/400x400' },
-    { title: 'test', image: 'https://placehold.co/400x400' },
-    { title: 'test', image: 'https://placehold.co/400x400' },
-  ];
 </script>
 
 <svelte:head>
@@ -33,7 +27,7 @@
   <section id="about">
     <div class="container">
       <Header title={content.about.title} />
-      <div>
+      <div class='landing__body'>
         {@html content.about.paragraph }
       </div>
     </div>
@@ -110,7 +104,7 @@
     }
   }
 
-  p {
+  .landing__body {
     color: $color-purple-light;
     font-size: 16px;
     font-weight: 400;
@@ -144,7 +138,7 @@
       }
     }
 
-    p:global {
+    .landing__body {
       column-count: 2;
       column-gap: 40px;
     }
@@ -154,7 +148,7 @@
     .landing__hero {
       align-items: center;
       background-size: cover;
-      background-image: url('../assets/images/hero-desktop.jpg');
+      background-image: url('$lib/images/hero-desktop.jpg');
     }
 
     .landing__text {

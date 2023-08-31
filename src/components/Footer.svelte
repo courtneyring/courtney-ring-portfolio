@@ -1,7 +1,7 @@
 <script>
-  import liIcon from '../assets/images/linkedin.svg';
-  import githubIcon from '../assets/images/github.svg';
-  import emailIcon from '../assets/images/paper-plane.svg';
+  import liIcon from '$lib/images/linkedin.svg';
+  import githubIcon from '$lib/images/github.svg';
+  import emailIcon from '$lib/images/paper-plane.svg';
 
 </script>
 

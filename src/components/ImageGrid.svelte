@@ -4,13 +4,13 @@
 
 <div class="grid__container">
   {#each tiles as tile}
-    <div class="grid__tile">
+    <a class="grid__tile" href='/work/{tile.id}'>
       <div class="grid__tile-text">{tile.title}</div>
       <div
         class="grid__tile-image"
         style="background-image: url(/work/{tile.id}/tile.png)"
       />
-    </div>
+    </a>
   {/each}
 </div>
 

@@ -1,18 +1,27 @@
 <script>
   export let data;
+  $: id = data.projectId;
 
+
+  import { goto } from '$app/navigation';
   import {
     Header,
     FactBox,
     ProjectSection,
   } from '../../../components/index.js';
   import copy from '$lib/json/portfolio.json';
+  import arrowRight from '$lib/images/arrow-right.svg';
 
-  const id = data.project;
-  const currentIdx = copy.findIndex((project) => project.id == id);
-  const content = copy[currentIdx];
-  const nextIdx = currentIdx == copy.length - 1 ? 0 : currentIdx + 1;
-  const nextProject = copy[nextIdx];
+  
+  $: currentIdx = copy.findIndex((project) => project.id == id);
+  $: content = copy[currentIdx];
+  $: nextIdx = currentIdx == copy.length - 1 ? 0 : currentIdx + 1;
+  $: nextProject = copy[nextIdx];
+
+  const routeToNext = () => {
+    goto(`/work/${nextProject.id}`)
+  }
+
   const getSectionStyle = (section) => {
     let style = '';
     if (section.backgroundColor) {
@@ -29,7 +38,7 @@
 </script>
 
 <a class='work__back' href='/'>
-    <img src='./assets/images/arrow-right.svg' />
+    <img src={arrowRight} />
     Home
 </a>
 
@@ -62,13 +71,13 @@
   </div>
 {/each}
 
-<div class='work__next'>
+<div class='work__next' on:click={routeToNext}>
     <div class='container work__next-container'>
         <div>
             <div class='work__eyebrow'>Next Project</div>
             <div class='work__value'>{nextProject.title}</div>
         </div>
-        <img src='../../../assets/images/arrow-right.svg' class='work__next-arrow' />
+        <img src={arrowRight} class='work__next-arrow' />
     </div> 
 
 </div>

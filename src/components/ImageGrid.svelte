@@ -4,7 +4,7 @@
 
 <div class="grid__container">
   {#each tiles as tile}
-    <a class="grid__tile" href='/work/{tile.id}'>
+    <a class="grid__tile" href="/work/{tile.id}">
       <div class="grid__tile-text">{tile.title}</div>
       <div
         class="grid__tile-image"
@@ -79,21 +79,23 @@
     }
   }
 
-  .grid__tile:hover {
-    & > .grid__tile-text {
-      opacity: 1;
-    }
-
-    & > .grid__tile-image::before {
-      opacity: 0.8;
-    }
-  }
-
   @media (min-width: 768px) {
     .grid__container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 15px;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .grid__tile:hover {
+      & > .grid__tile-text {
+        opacity: 1;
+      }
+
+      & > .grid__tile-image::before {
+        opacity: 0.8;
+      }
     }
   }
 </style>

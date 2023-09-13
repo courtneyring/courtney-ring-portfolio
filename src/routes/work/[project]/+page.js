@@ -1,5 +1,7 @@
+export const prerender = true;
+
 export const load = ({ params }) => {
   return {
-    project: params.project
+    projectId: params.project
   }
 }

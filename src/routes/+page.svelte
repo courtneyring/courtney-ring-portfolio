@@ -29,6 +29,7 @@
       <Header title={content.about.title} />
       <div class='landing__body'>
         {@html content.about.paragraph }
+        <div class='landing__pic'></div>
       </div>
     </div>
   </section>
@@ -44,7 +45,7 @@
 <style lang="scss">
   .landing__hero {
     align-items: flex-start;
-    background-image: url('../assets/images/hero-mobile.jpg');
+    background-image: url('$lib/images/hero-mobile.jpg');
     background-position: 71% 83%;
     background-size: auto 119%;
     display: flex;
@@ -111,6 +112,16 @@
     line-height: 30px;
   }
 
+  .landing__pic  {
+    background-image: url('$lib/images/profile-image.jpg');
+    background-size: 120%;
+    background-position: 0% 100%;
+    border-radius: 600px;
+    height:300px;
+    margin: 0 auto;
+    width: 300px;
+  }
+
   
 
   @media (min-width: 480px) {
@@ -139,8 +150,19 @@
     }
 
     .landing__body {
-      column-count: 2;
-      column-gap: 40px;
+      // column-count: 2;
+      // column-gap: 40px;
+      font-size: 20px;
+      line-height: 34px;
+      display: flex;
+
+
+    }
+
+    .landing__pic {
+      min-height: 400px;
+      min-width: 400px;
+      margin-left: 80px;
     }
   }
 

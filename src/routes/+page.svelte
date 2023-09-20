@@ -3,8 +3,8 @@
   import content from '$lib/json/landing.json';
   import portfolio from '$lib/json/portfolio.json';
   const tiles = portfolio.map((project) => {
-    let {title, id} = project;
-    return {title, id}
+    let {title, id, tileImg} = project;
+    return {title, id, tileImg}
   })
 
 </script>

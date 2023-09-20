@@ -8,7 +8,7 @@
       <div class="grid__tile-text">{tile.title}</div>
       <div
         class="grid__tile-image"
-        style="background-image: url(/work/{tile.id}/tile.png)"
+        style="background-image: url(/work/{tile.id}/{tile.tileImg})"
       />
     </a>
   {/each}

@@ -213,30 +213,56 @@
       }
     ]
   },
-    {
-      "id": "nissan-hd-mapping",
-      "title": "Nissan High Definition Road Map",
-      "heroImg": "hero.png",
-      "heroPos": "center 40%",
-      "tileImg": "tile.jpg",
-      "body": "<p>With the debut of Nissan's latest iteration of driver-assist technology,  ProPilot Assist 2.0, the first question in everyone's minds was where it could be used. With a need to present this information in an engaging, interactive way, the solution was obvious: a map. And not just a regular map - the very map that is used in the ProPilot Assist system with accuracy down to the centimeter.<p></p>Partnering with HD Map provider, Dynamic Map Platform (formerly Ushr), we created this map, displaying the data in a fully interactive way. It allows users to zoom in or out points of interest, pan across the country, as well as search specific location with autocomplete powered by Google.</p>",
-      "skills": "OpenLayers, OpenStreetMap, Jinja, Jenkins, Jira, Gulp",
-      "employer": "Critical Mass",
-      "client": "Nissan",
-      "date": "March 2022 - June 2022",
-      "role": "Tech Lead",
-      "sections": [
-        {
-          "layout": "image",
-          "image": "hd-mapping-mocks.png",
-          "backgroundColor": "#EBECED"
-        },
-        {
-          "layout": "text",
-          "title": "Technical Details",
-          "body": "The map uses OpenLayers and map tiles to display the map data. The base layer map comes from OpenStreetMap and the marked overlay is served by Dynamic Map Platform. Location lookup and functionality are done using Google's Places and Autocompletion services. ",
-          "backgroundColor": "#191C23"
-        }
-      ]
-    }
+  {
+    "id": "nissan-hd-mapping",
+    "title": "Nissan High Definition Road Map",
+    "heroImg": "hero.png",
+    "heroPos": "center 40%",
+    "tileImg": "tile.jpg",
+    "body": "<p>With the debut of Nissan's latest iteration of driver-assist technology,  ProPilot Assist 2.0, the first question in everyone's minds was where it could be used. With a need to present this information in an engaging, interactive way, the solution was obvious: a map. And not just a regular map - the very map that is used in the ProPilot Assist system with accuracy down to the centimeter.<p></p>Partnering with HD Map provider, Dynamic Map Platform (formerly Ushr), we created this map, displaying the data in a fully interactive way. It allows users to zoom in or out points of interest, pan across the country, as well as search specific location with autocomplete powered by Google.</p>",
+    "skills": "OpenLayers, OpenStreetMap, Jinja, Jenkins, Jira, Gulp",
+    "employer": "Critical Mass",
+    "client": "Nissan",
+    "date": "March 2022 - June 2022",
+    "role": "Tech Lead",
+    "sections": [
+      {
+        "layout": "image",
+        "image": "hd-mapping-mocks.png",
+        "backgroundColor": "#EBECED"
+      },
+      {
+        "layout": "text",
+        "title": "Technical Details",
+        "body": "The map uses OpenLayers and map tiles to display the map data. The base layer map comes from OpenStreetMap and the marked overlay is served by Dynamic Map Platform. Location lookup and functionality are done using Google's Places and Autocompletion services. ",
+        "backgroundColor": "#191C23"
+      }
+    ]
+  },
+  {
+    "id": "nissan-ariya-launch-campaign",
+    "title": "Nissan ARIYA Launch Campaign",
+    "heroImg": "2023-nissan-ariya.webp",
+    "heroPos": "center 40%",
+    "tileImg": "desktop-mockup.jpg",
+    "body": "<p>With the long-awaited Nissan ARIYA, rolled out in 2023, Nissan was looking to raise excitement around its new all-electric SUV. For customers coming from their media and social campaigns, they needed a landing page to encourage customers to keep exploring the details of the new vehicle. Drawing from the already existing duality theme of the Ariya, we created a page to demonstrate all that the Ariya could achieve. From \"fiercely refined\" to \"elegantly exhilarating\", the site displayed split videos, key metrics, and plenty of images to draw the users into the experience. </p>",
+    "skills": "Gatsby.js, styled-components, Jenkins, Jira",
+    "employer": "Critical Mass",
+    "client": "Nissan",
+    "date": "October 2022 - December 2022",
+    "role": "Tech Lead",
+    "sections": [
+      {
+        "layout": "image",
+        "image": "ariya-launch-mockup.png",
+        "backgroundColor": "#EBECED"
+      },
+      {
+        "layout": "text",
+        "title": "Technical Details",
+        "body": "The site was built with Gatbsy.js, interlacing video and animation. It contains a variety of CTAs to encourage users to read more, try out the ARIYA AR app, as well as visit the virtual reality experience. The site meets WCAG accessibility standards, includes site analytics, and incorporates SEO best practices.  I led a team of two developers and one QA analyst to deliver this site in a very tight three month timeline.  ",
+        "backgroundColor": "#191C23"
+      }
+    ]
+  }
 ]

@@ -61,3 +61,75 @@ a {
   }
 
 }
+
+h1 {
+  font-size: 45px;
+  line-height: 55px;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.pinned>section {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 0px 15px;
+}
+
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 60px;
+    line-height: 80px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 120px;
+    line-height: 180px;
+  }
+
+  h2 {
+    font-size: 80px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  section {
+    padding: 0px 50px;
+  }
+}

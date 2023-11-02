@@ -17,7 +17,13 @@
 	.app {
 		display: flex;
 		flex-direction: column;
-		min-height: 100vh;
+    
 	}
+
+  main {
+    max-width: 2000px;
+    margin: 0 auto;
+    width: 100%;
+  }
 
 </style>

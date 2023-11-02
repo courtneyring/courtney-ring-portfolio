@@ -46,6 +46,7 @@
     display: block;
     position: relative;
     z-index: 3;
+    height: 100vh;
   }
 
   .footer__container {
@@ -54,6 +55,7 @@
     flex-direction: column;
     justify-content: center;
     min-height: 300px;
+    height: 100%;
     padding-top: 30px;
     padding-bottom: 70px;
   }

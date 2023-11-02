@@ -1,0 +1,204 @@
+<section class="timeline">
+  <h2 class="timeline__header">
+    With a background in software development and tech leadership
+  </h2>
+  <div class="timeline__center">
+    <div class="timeline__content">
+      <div class="timeline__blocks">
+        <div class="timeline__block">
+          <div class="timeline__copy">
+            <div class="timeline__year">2017</div>
+            <div class="timeline__description">
+              I started in the agency world as a frontend developer. Here I made
+              data visualizations using D3 and _________
+            </div>
+          </div>
+          <div class="timeline__hr" />
+        </div>
+
+        <div class="timeline__block">
+          <div class="timeline__copy">
+            <div class="timeline__year">2019</div>
+            <div class="timeline__description">
+              I gained a passion for all things experiential at Imagination.
+              Here I worked across a variety of technologies and ______
+            </div>
+          </div>
+          <div class="timeline__hr" />
+        </div>
+        <div class="timeline__block">
+          <div class="timeline__copy">
+            <div class="timeline__year">2022</div>
+            <div class="timeline__description">
+              Critical Mass has put me In a role that allows me to be the
+              digital perspective in the creative process. I bring my technical
+              expertise to help bring ideas to life
+            </div>
+          </div>
+          <div class="timeline__hr" />
+        </div>
+      </div>
+      <div class="timeline__diagram">
+        <div class="timeline__vr" />
+      </div>
+    </div>
+    <div class='timeline__description-mobile'>
+       I gained a passion for all things experiential at Imagination.
+              Here I worked across a variety of technologies and ______
+    </div>
+    <div class="timeline__image" />
+  </div>
+</section>
+
+<style lang="scss">
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  .timeline__header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .timeline__center {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+  }
+
+  .timeline__content {
+    justify-content: space-between;
+    display: flex;
+
+    flex-direction: column;
+    width: 100%;
+    // width: 200px
+  }
+
+  .timeline__description {
+    display: none;
+  }
+
+  .timeline__blocks {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .timeline__block {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    text-align: right;
+
+    & > span {
+      font-weight: 700;
+    }
+  }
+
+  .timeline__copy {
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    & .timeline__year, .timeline__description {
+      font-weight: inherit;
+      color: inherit;
+    }
+
+    // & > span {
+    //   font-weight: inherit;
+    //   color: inherit;
+    // }
+  }
+
+  .timeline__hr {
+    border-left: 1px solid black;
+    height: 30px;
+  }
+
+  .timeline__vr {
+    height: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  .timeline__diagram {
+    margin-bottom: 20px;
+  }
+
+  .timeline__image {
+    width: 100%;
+    height: 300px;
+    background-color: grey;
+  }
+
+
+
+  @media (min-width: 992px) {
+    .timeline__center {
+      flex-direction: row;
+      width: unset;
+    }
+
+    .timeline__header {
+      margin-bottom: 50px;
+    }
+
+    .timeline__content {
+      margin-right: 100px;
+      justify-content: flex-start;
+    }
+
+    .timeline__copy {
+      display: flex;
+      width: 200px;
+      margin-right: 50px;
+    }
+
+    .timeline__blocks {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .timeline__block {
+      flex-direction: row;
+      margin-bottom: 80px;
+    }
+    .timeline__hr {
+      border-top: 1px solid black;
+      border-left: 0px;
+      height: unset;
+      width: 50px;
+    }
+
+    .timeline__vr {
+      border-bottom: 0px;
+      border-left: 1px solid black;
+    }
+
+    .timeline__content {
+      flex-direction: row;
+    }
+
+    .timeline__description {
+      display: block;
+    }
+
+    .timeline__description-mobile {
+      display: none;
+    }
+
+    .timeline__image {
+      width: 500px;
+      height: 300px;
+      background-color: grey;
+    }
+  }
+</style>

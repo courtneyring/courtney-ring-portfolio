@@ -70,6 +70,7 @@
       font-weight: 400;
       letter-spacing: 3px;
       text-transform: uppercase;
+      display: none;
     }
 
     & > h1 {
@@ -138,8 +139,9 @@
 
     .landing__text {
       & > h2 {
-        font-size: 25px;
-        letter-spacing: 6px;
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
       }
 
       & > h1 {
@@ -176,6 +178,11 @@
     .landing__text {
       margin: 0px;
 
+      & > h2 {
+        font-size: 17px;
+        letter-spacing: 3px;
+      }
+
       & > h1 {
         font-size: 120px;
         line-height: 120px;
@@ -185,8 +192,14 @@
   }
 
   @media (min-width: 1200px) {
-    .landing__text > h1 {
+    .landing__text {
+      & > h2 {
+        font-size: 24px;
+        letter-spacing: 5px;
+      }
+      & > h1 {
       font-size: 140px;
+    }
     }
   }
 </style>

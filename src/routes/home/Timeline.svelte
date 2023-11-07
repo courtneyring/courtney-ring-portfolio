@@ -33,8 +33,16 @@
         </div>
       {/each}
     </div>
-
-    <div class="timeline__image" />
+    <div class="timeline__images">
+      {#each timelineMarks as mark}
+        <!-- <div class="timeline__image" /> -->
+        <div class="timeline__image-set">
+          {#each mark.images as markImage}
+            <img src={markImage} class="timeline__image" />
+          {/each}
+        </div>
+      {/each}
+    </div>
   </div>
 </section>
 
@@ -133,10 +141,34 @@
     margin-bottom: 20px;
   }
 
+  .timeline__image-set {
+    position: absolute;
+    opacity: 0;
+    margin-top: 30px;
+
+    &:first-child {
+      // opacity: 1;
+    }
+  }
+
   .timeline__image {
-    width: 100%;
+    width: auto;
     height: 300px;
-    background-color: grey;
+    position: absolute;
+    
+
+    // &:first-child {
+    //   transform: rotate(-10deg);
+    // }
+    // &:nth-child(2) {
+    //   transform: rotate(10deg);
+    // }
+  }
+
+  .timeline__images {
+    width: 457px;
+    height: 100%;
+    // position: absolute;
   }
 
   @media (min-width: 992px) {
@@ -195,7 +227,7 @@
     }
 
     .timeline__image {
-      width: 500px;
+      width: auto;
       height: 300px;
       background-color: grey;
     }

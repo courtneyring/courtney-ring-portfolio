@@ -18,6 +18,7 @@
     justify-content: center;
     width: 100%;
     overflow: hidden;
+    pointer-events: none;
   }
 
   .split__content {

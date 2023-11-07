@@ -11,15 +11,30 @@
     "marks": [
       {
         "year": "2017",
-        "description": "I started in the agency world as a frontend developer. Here I made data visualizations using D3 and _________"
+        "description": "I started in the agency world as a frontend developer. Here I made data visualizations using D3 and _________",
+        "images": [
+          "/work/aptiv-sva/tile.jpg",
+          "/work/aptiv-sva/tile.jpg",
+          "/work/aptiv-sva/tile.jpg"
+        ]
       },
       {
         "year": "2019",
-        "description": "I gained a passion for all things experiential at Imagination. Here I worked across a variety of technologies and ______"
+        "description": "I gained a passion for all things experiential at Imagination. Here I worked across a variety of technologies and ______",
+        "images": [
+          "/work/aptiv-sva/tile.jpg",
+          "/work/aptiv-sva/tile.jpg",
+          "/work/aptiv-sva/tile.jpg"
+        ]
       },
       {
         "year": "2022",
-        "description": "Critical Mass has put me In a role that allows me to be the digital perspective in the creative process. I bring my technical expertise to help bring ideas to life"
+        "description": "Critical Mass has put me In a role that allows me to be the digital perspective in the creative process. I bring my technical expertise to help bring ideas to life",
+        "images": [
+          "/work/aptiv-sva/tile.jpg",
+          "/work/aptiv-sva/tile.jpg",
+          "/work/aptiv-sva/tile.jpg"
+        ]
       }
     ]
   }

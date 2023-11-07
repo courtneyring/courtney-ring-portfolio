@@ -66,6 +66,7 @@
     height: 30vw;
     min-width: 30vw;
     margin-right: 10vw;
+    // cursor: pointer
   }
 
   .featured__card {
@@ -74,6 +75,7 @@
     min-width: 100vw;
     transform: translateX(100vw);
     position: absolute;
+    pointer-events: none;
   }
 
   .portfolio__header {
@@ -141,6 +143,18 @@
       opacity: 0;
       z-index: 2;
       transition: all 0.5s ease;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .grid__tile:hover {
+      & > .grid__tile-text {
+        opacity: 1;
+      }
+
+      & > .grid__tile-image::before {
+        opacity: 0.8;
+      }
     }
   }
 </style>

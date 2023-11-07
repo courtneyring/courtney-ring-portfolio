@@ -77,48 +77,77 @@ const splitExit = () => {
     duration:5,
     opacity: 1
   },2)
-  tl.to('.timeline__block:nth-child(1) > .timeline__copy', {
-    textShadow: '1px 0 0 black',
-    immediateRender: false,
-    color: 'black',
-    duration: 1, 
-    yoyo: true, 
-    repeat: 1
-  }, 7)
-  tl.to('.timeline__description-mobile:nth-child(1)', {
-    opacity: 1,
-    yoyo: true,
-    duration: 1, 
-    repeat: 1, 
-  }, 7)
-  tl.to('.timeline__block:nth-child(2) > .timeline__copy', {
-    textShadow: '1px 0 0 black',
-    immediateRender: false,
-    color: 'black',
-    yoyo: true,
-    repeat: 1, 
-    duration: 1
-  }, 9)
-  tl.to('.timeline__description-mobile:nth-child(2)', {
-    opacity: 1,
-    yoyo: true,
-    duration: 1,
-    repeat: 1,
-  }, 9)
-  tl.to('.timeline__block:nth-child(3) > .timeline__copy', {
-    textShadow: '1px 0 0 black',
-    immediateRender: false,
-    color: 'black',
-    yoyo: true,
-    repeat: 1,
-    duration: 1
-  }, 11)
-  tl.to('.timeline__description-mobile:nth-child(3)', {
-    opacity: 1,
-    yoyo: true,
-    duration: 1,
-    repeat: 1,
-  }, 11)
+  for (let i = 1; i < 4; i++) {
+    tl.to(`.timeline__block:nth-child(${i}) > .timeline__copy`, {
+      textShadow: '0.8px 0 0 black',
+      immediateRender: false,
+      color: 'black',
+      duration: 1,
+      yoyo: true,
+      repeat: 1
+    }, 5+i*2)
+    tl.to(`.timeline__description-mobile:nth-child(${i})`, {
+      opacity: 1,
+      yoyo: true,
+      duration: 1,
+      repeat: 1,
+    }, 5+i*2)
+    // tl.to(`.timeline__image-set:nth-child(${i})`, {
+    //   opacity: 1,
+    //   yoyo: true,
+    //   duration: 1,
+    //   repeat: 1,
+    // }, 5+i*2)
+    tl.to(`.timeline__image-set:nth-child(${i})`, {
+      marginTop: 0,
+      duration: 2,
+    }, 5+i*2)
+    tl.add(() => gsap.to(`.timeline__image-set:nth-child(${i}) > .timeline__image:nth-child(1)`, {
+      transform: 'translate(-180px, 60px) rotate(-25deg)',
+      immediateRender: false, 
+      duration: 1, 
+    }), '<')
+    tl.add(() => gsap.to(`.timeline__image-set:nth-child(${i}) > .timeline__image:nth-child(2)`, {
+      transform: 'translate(180px, 60px) rotate(25deg)', 
+      immediateRender: false, 
+      duration: 1,
+    }), '<')
+    tl.add(() => gsap.to(`.timeline__image-set:nth-child(${i})`, {
+      opacity: 1,
+      duration: 1,
+      repeat: 1,
+    }), '>')
+
+  }
+  
+  // tl.to('.timeline__block:nth-child(2) > .timeline__copy', {
+  //   textShadow: '0.8px 0 0 black',
+  //   immediateRender: false,
+  //   color: 'black',
+  //   yoyo: true,
+  //   repeat: 1, 
+  //   duration: 1
+  // }, 9)
+  // tl.to('.timeline__description-mobile:nth-child(2)', {
+  //   opacity: 1,
+  //   yoyo: true,
+  //   duration: 1,
+  //   repeat: 1,
+  // }, 9)
+  // tl.to('.timeline__block:nth-child(3) > .timeline__copy', {
+  //   textShadow: '0.8px 0 0 black',
+  //   immediateRender: false,
+  //   color: 'black',
+  //   yoyo: true,
+  //   repeat: 1,
+  //   duration: 1
+  // }, 11)
+  // tl.to('.timeline__description-mobile:nth-child(3)', {
+  //   opacity: 1,
+  //   yoyo: true,
+  //   duration: 1,
+  //   repeat: 1,
+  // }, 11)
   tl.to('.featured__card' ,{
     x: 0,
     duration: 1
@@ -132,9 +161,9 @@ const splitExit = () => {
     height: () => .3*window.innerWidth,
     width: () => window.innerWidth * .3,
     minWidth: () => window.innerWidth * .3 + 'px',
-    duration: 1
+    duration: 1, 
   }, 15)
-  
+  tl.to('.featured__card', {pointerEvents: 'all'}, 16)
   tl.to('.portfolio__cards', {
     left: () => .75*window.innerWidth,
     duration: 1

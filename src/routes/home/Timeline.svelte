@@ -1,3 +1,8 @@
+<script>
+  import landingContent from '$lib/json/landing.json';
+  const timelineMarks = landingContent.timeline.marks;
+</script>
+
 <section class="timeline">
   <h2 class="timeline__header">
     With a background in software development and tech leadership
@@ -5,47 +10,30 @@
   <div class="timeline__center">
     <div class="timeline__content">
       <div class="timeline__blocks">
-        <div class="timeline__block">
-          <div class="timeline__copy">
-            <div class="timeline__year">2017</div>
-            <div class="timeline__description">
-              I started in the agency world as a frontend developer. Here I made
-              data visualizations using D3 and _________
+        {#each timelineMarks as mark}
+          <div class="timeline__block">
+            <div class="timeline__copy">
+              <div class="timeline__year">{mark.year}</div>
+              <div class="timeline__description">
+                {mark.description}
+              </div>
             </div>
+            <div class="timeline__hr" />
           </div>
-          <div class="timeline__hr" />
-        </div>
-
-        <div class="timeline__block">
-          <div class="timeline__copy">
-            <div class="timeline__year">2019</div>
-            <div class="timeline__description">
-              I gained a passion for all things experiential at Imagination.
-              Here I worked across a variety of technologies and ______
-            </div>
-          </div>
-          <div class="timeline__hr" />
-        </div>
-        <div class="timeline__block">
-          <div class="timeline__copy">
-            <div class="timeline__year">2022</div>
-            <div class="timeline__description">
-              Critical Mass has put me In a role that allows me to be the
-              digital perspective in the creative process. I bring my technical
-              expertise to help bring ideas to life
-            </div>
-          </div>
-          <div class="timeline__hr" />
-        </div>
+        {/each}
       </div>
       <div class="timeline__diagram">
         <div class="timeline__vr" />
       </div>
     </div>
-    <div class='timeline__description-mobile'>
-       I gained a passion for all things experiential at Imagination.
-              Here I worked across a variety of technologies and ______
+    <div class="timeline__mobiles">
+      {#each timelineMarks as mark}
+        <div class="timeline__description-mobile">
+          {mark.description}
+        </div>
+      {/each}
     </div>
+
     <div class="timeline__image" />
   </div>
 </section>
@@ -62,7 +50,7 @@
 
   .timeline__header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   .timeline__center {
@@ -75,7 +63,7 @@
   .timeline__content {
     justify-content: space-between;
     display: flex;
-
+    margin-bottom: 20px;
     flex-direction: column;
     width: 100%;
     // width: 200px
@@ -83,6 +71,17 @@
 
   .timeline__description {
     display: none;
+  }
+
+  .timeline__mobiles {
+    width: 100%;
+    height: 100px;
+  }
+
+  .timeline__description-mobile {
+    margin-bottom: 50px;
+    position: absolute;
+    opacity: 0;
   }
 
   .timeline__blocks {
@@ -107,8 +106,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    & .timeline__year, .timeline__description {
+
+    & .timeline__year,
+    .timeline__description {
       font-weight: inherit;
       color: inherit;
     }
@@ -139,8 +139,6 @@
     background-color: grey;
   }
 
-
-
   @media (min-width: 992px) {
     .timeline__center {
       flex-direction: row;
@@ -148,12 +146,13 @@
     }
 
     .timeline__header {
-      margin-bottom: 50px;
+      // margin-bottom: 50px;
     }
 
     .timeline__content {
       margin-right: 100px;
       justify-content: flex-start;
+      margin-bottom: 0px;
     }
 
     .timeline__copy {
@@ -191,7 +190,7 @@
       display: block;
     }
 
-    .timeline__description-mobile {
+    .timeline__mobiles {
       display: none;
     }
 

@@ -18,7 +18,6 @@
     justify-content: center;
     width: 100%;
     overflow: hidden;
-
   }
 
   .split__content {
@@ -27,35 +26,51 @@
     text-align: center;
     z-index: 2;
 
+    & h2 {
+      font-size: 45px;
+    }
+
     & span {
+      font-size: inherit;
       display: block;
       font-weight: 700;
+      margin: 30px 0px;
     }
   }
 
-
   .split__code {
-    max-width: 100%;
+    height: 100%;
     position: absolute;
-    right: -100%;
+    right: -320%;
+    top: 36%;
     z-index: 1;
   }
 
   .split__color {
     height: 150%;
     position: absolute;
-    left: -130%;
+    left: -430%;
+    top: -63%;
   }
 
+  @media (min-width: 922px) {
+    .split__content h2 {
+      font-size: 80px;
+      & > span {
+        margin: 0px;
+      }
+    }
 
-  @media(min-width: 922px) {
     .split__code {
       height: 120%;
       position: absolute;
-      // right: -100%;
+      right: -100%;
+      top: unset;
     }
     .split__color {
-
+      height: 150%;
+      left: -130%;
+      top: unset;
     }
   }
 </style>

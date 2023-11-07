@@ -6,5 +6,21 @@
   "about": {
     "title": "About Me",
     "paragraph": "<p>Hi there! I'm Courtney and I'm a creative developer and technology lead based in New York City. I have worked in the tech industry for seven years and have had the opportunity to be involved in a variety of projects ranging from corporate websites to in-person digital activations. I enjoy getting my hands on new projects to figure out innovative solutions and I thrive on the deadlines, along with the feeling of accomplishment that comes when projects are deployed.</p>"
+  }, 
+  "timeline": {
+    "marks": [
+      {
+        "year": "2017",
+        "description": "I started in the agency world as a frontend developer. Here I made data visualizations using D3 and _________"
+      },
+      {
+        "year": "2019",
+        "description": "I gained a passion for all things experiential at Imagination. Here I worked across a variety of technologies and ______"
+      },
+      {
+        "year": "2022",
+        "description": "Critical Mass has put me In a role that allows me to be the digital perspective in the creative process. I bring my technical expertise to help bring ideas to life"
+      }
+    ]
   }
 }

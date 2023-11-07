@@ -5,6 +5,9 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
+const isMobile = () => window.innerWidth < 768;
+console.log(isMobile)
+
 const landingEntranceAnimations = () => {
   const tl = gsap.timeline({ ease: 'power1.inOut' });
   tl.to(
@@ -35,8 +38,10 @@ const splitEntrance = () => {
       // markers: true,
     },
   })
-  tl.to('.split__code', { right: '-60%', immediateRender: false, duration: 1 }, 0)
-  tl.to('.split__color', { left: '-70%', immediateRender: false, duration: 1 }, 0)
+  const codePos = isMobile() ? '-211%' : '-60%';
+  const colorPos = isMobile() ? '-300%' : '-70%';
+  tl.to('.split__code', { right: codePos, immediateRender: false, duration: 1 }, 0)
+  tl.to('.split__color', { left: colorPos, immediateRender: false, duration: 1 }, 0)
   tl.to('.split__content', { marginTop: -100, opacity: 1, immediateRender: false, duration: 1 }, 0)
   tl.to('.split__text', { x: 0, opacity: 1, immediateRender: false, duration: 1 }, 0)
 
@@ -56,6 +61,7 @@ const splitExit = () => {
       scrub: true, 
     },
   }, 0)
+
   tl.to('.split__content', {
     scale: 30,
     duration: 5,
@@ -72,26 +78,47 @@ const splitExit = () => {
     opacity: 1
   },2)
   tl.to('.timeline__block:nth-child(1) > .timeline__copy', {
-    fontWeight: 700,
+    textShadow: '1px 0 0 black',
+    immediateRender: false,
     color: 'black',
     duration: 1, 
     yoyo: true, 
     repeat: 1
   }, 7)
+  tl.to('.timeline__description-mobile:nth-child(1)', {
+    opacity: 1,
+    yoyo: true,
+    duration: 1, 
+    repeat: 1, 
+  }, 7)
   tl.to('.timeline__block:nth-child(2) > .timeline__copy', {
-    fontWeight: 700,
+    textShadow: '1px 0 0 black',
+    immediateRender: false,
     color: 'black',
     yoyo: true,
     repeat: 1, 
     duration: 1
-  })
+  }, 9)
+  tl.to('.timeline__description-mobile:nth-child(2)', {
+    opacity: 1,
+    yoyo: true,
+    duration: 1,
+    repeat: 1,
+  }, 9)
   tl.to('.timeline__block:nth-child(3) > .timeline__copy', {
-    fontWeight: 700,
+    textShadow: '1px 0 0 black',
+    immediateRender: false,
     color: 'black',
     yoyo: true,
     repeat: 1,
     duration: 1
-  })
+  }, 11)
+  tl.to('.timeline__description-mobile:nth-child(3)', {
+    opacity: 1,
+    yoyo: true,
+    duration: 1,
+    repeat: 1,
+  }, 11)
   tl.to('.featured__card' ,{
     x: 0,
     duration: 1
@@ -101,20 +128,23 @@ const splitExit = () => {
   }, 14)
   tl.to('.portfolio__header', {visibility: 'visible'}, 14)
   tl.to('.featured__card' ,{
-    scale: 0.3, 
+    // scale: 0.3, 
+    height: () => .3*window.innerWidth,
+    width: () => window.innerWidth * .3,
+    minWidth: () => window.innerWidth * .3 + 'px',
     duration: 1
-  }, 14)
+  }, 15)
   
   tl.to('.portfolio__cards', {
     left: () => .75*window.innerWidth,
     duration: 1
-  }, 14);
+  }, 16);
 
   const cards = document.querySelector('.portfolio__cards');
   tl.to('.all__cards', {
-    x: () => - (cards.offsetWidth - .25 * window.innerWidth),
+    x: () => - (cards.offsetWidth + window.innerWidth * 1.5),
     duration: 5
-  }, 15)
+  }, 16)
 }
 
 const timelineEnter = () => {

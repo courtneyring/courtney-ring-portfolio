@@ -2,14 +2,13 @@
   {
     "id": "ford-drive",
     "title": "Ford Built Wild & Built to Electrify",
-    "body": "<p>When autoshows returned after Covid during the summer of 2021, Ford wanted to make a big impression for its flashiest cars - the Bronco and the Mach-E.</p><p>The Bronco draws customers in because of its off-roading capabilities. So to demonstrate all it could do, Ford built an obstacle course ending with “The Mountain” where they could show off the Bronco’s peak incline and decline angles.</p><p>The Mach-E is Ford’s electric sports car with an impressive ability to accelerate from 0-60 in 3.5 seconds. So similar to the Bronco, they built a runway for drivers to show this acceleration and the car at peak performance.</p><p>In both cases, Ford wanted customers to have a souvenir to go home with. So we built an application that records visitors’ reaction at the exact moment of surprise and delight and programmatically edit the video for a keepsake they could view and share afterwards.</p>",
+    "body": "<p>When autoshows returned after Covid during the summer of 2021, Ford wanted to make a big impression for its flashiest cars - the Bronco and the Mach-E.</p><p>TThe Bronco draws customers in because of its off-roading capabilities and Ford wanted to demonstrate just that. Imagination designed and built an obstacle course ending with “The Mountain” to showcase the Bronco’s peak incline and decline angles.</p><p>The Mach-E is Ford’s electric sports car with an impressive ability to accelerate from 0-60 in 3.5 seconds. With this same desire to show off peak performance, Ford had a runway for drivers to put the pedal to the metal and allow participants to feel the speed for themselves.</p><p>In both cases, Ford wanted customers to have a digital souvenir to go home with to remember these experiences. So as part of the activation, we built an application that records visitors’ reaction at the exact moment of surprise and delight and programmatically edit the video for a keepsake they could view and share afterwards.</p>",
     "heroImg": "hero.png",
     "heroPos": "center 35%",
     "tileImg": "tile2.jpeg",
     "tilePos": "37% 10%",
     "employer": "Imagination",
     "client": "Ford",
-    "date": "July 2021 - Present",
     "role": "Fullstack Developer, Onsite Support",
     "skills": "Python, Angular, Scss, Node.js, Next.js, RabbitMQ, MySql",
     "sections": [
@@ -21,7 +20,7 @@
       {
         "layout": "text",
         "title": "Technical Details",
-        "body": "<p>The goal of the project was get clips of video on peak acceleration for the Mach-E and peak incline/decline for the Bronco.</p><p>In order to do this, we had an accelerometer and gyroscope in the trunk of each car. We used a python script on a raspberry pi to read and process these numbers continuously. We used the accelerometer readings directly for the Mach-E, but the Bronco needed data on the incline angle of the car, so we used the data from both sensors and the complimentary filter to combine them into incline angle.</p><p>All this data is then sent off to the video recording application running on a laptop, also in stored in the trunk of the car. The application was an Angular application connected to a webcam in order to start and stop the recording. It recorded time stamps as incline and acceleration thresholds were passed. The video and timestamps were then passed off to the video processing application on the backend.</p><p>We had a physical server on site to run the backend, the video processing application itself was run in a docker container on a virtual machine on that server. The application used a node backend to queue jobs using rabbitmq as they came in from the frontend and a node worker to process each job. Most of the work done by the worker used ffmpeg - it was used to splice the video at the given timestamps, add clips of stock video, audio, and a layover.  It then sent the final product to Amazon S3 for storage and an email to the user for them to view and share.</p>",
+        "body": "<p>The goal of the project was get clips of video on  peak incline/decline for the Bronco and peak acceleration for the Mach-E.</p><p>In order to do this, we had an accelerometer and gyroscope in the trunk of each vehicle. We used a python script on a raspberry pi to read and process these numbers continuously. We used the accelerometer readings directly for the Mach-E, but the Bronco needed data on the incline angle of the car, so we used the data from both sensors and the complimentary filter to combine them into an incline angle.</p><p>All of this data was then sent to the video recording application running on a laptop, also in stored in the trunk of the car. The application was connected to a webcam attached to the dashboard that recorded the participants in the back seat. As the vehicle hit incline, decline, and acceleration thresholds, the video application recorded timestamps. Once the ride ended, the video and timestamps were then passed off to the video processing application.</p><p>The backend which received these requests and did the video processing was run on a physical server kept in back of house.  The video processing application itself was run in a docker container on a virtual machine on that server. The application used a node backend to queue jobs using rabbitmq as they came in from the frontend and a node worker to process each job. Ffmpeg was used to splice the video at the given timestamps, add clips of stock video, audio, and a layover. It then sent the final product to Amazon S3 for storage and an email to the user for them to view and share.</p>",
         "backgroundColor": "#EBECED",
         "textColor": "#667084"
       },
@@ -33,7 +32,7 @@
       {
         "layout": "text",
         "title": "Outcome",
-        "body": "<p>Coming Soon</p>",
+        "body": "<p>The \"Built Wild\" and \"Build to Electrify\" activations debuted at the Chicago Autoshow 2021 with massive success. Ford continued with the program for the 2021 autoshow season. During my time supporting this activation between July 2021 and March 2022, it was brought to 8 different auto shows and 28,552 total videos were sent to customers. The activation is still brought to auto shows across the country today.</p>",
         "backgroundColor": "#191c23",
         "textColor": "#ffffff"
       },
@@ -47,14 +46,13 @@
   {
     "id": "canon-photobooth",
     "title": "Canon Photo Booth Experience",
-    "body": "<p>For CES 2020, Canon had plans to create a flashy centralized runway lined with camera stands to give participants the opportunity to demo their cameras and compare Canon’s offerings. However, they wanted to make the experience more personalized, so we added a digital component to the activation that would allow the participants to save their images to their Canon Passport profile. With this functionality, user were able to revisit the photos to take a closer look after the show, as well as allow Canon to keep in contact with the leads they collected from the stand.</p><p>We went with this particular application for two reasons - it enhanced the participant experience by keeping them engaged in the content and giving them something to take home and it also drew attention to Canon’s Software Developer Kit for those who wanted to get into more of the technical aspects of their camera.</p>",
+    "body": "<p>For CES 2020, Canon had plans to create a flashy centralized fashion show lined with cameras as a fun way to demo their offerings. However, they wanted to make the experience more personalized, so we added a digital component to the activation that would allow the participants to save their images to their Canon Passport profile. With this functionality, users were able to revisit the photos after the show, and this also allowed Canon to collect leads from those who visited the stand.</p><p>In addition to increasing participant engagement and lead generation, this application also showcased the abilities of Canon's Software Development Kit. In our particular case, we used it to send data between the cameras and nearby tablets, as well as control the cameras from the tablets themselves.</p>",
     "heroImg": "hero.png",
     "heroPos": "59% center",
     "tileImg": "tile.png",
     "skills": "Angular, Scss, C++, Nodejs",
     "employer": "Imagination",
     "client": "Canon",
-    "date": "November 2019 - January 2020",
     "role": "Fullstack Developer, Onsite Support",
     "sections": [
       {
@@ -64,7 +62,7 @@
       {
         "layout": "text",
         "title": "Technical Details",
-        "body": "<p>The Photo Booth experience was a collection of applications that facilitated capturing, saving, and printing images. The user would scan their QR code and take a pictures using one of Canon’s premium DSLR cameras. The image would then appear on the tablet and give them the option to either save the picture or retake it. Once the user saved the image, it would be saved to their passport, and they also had the option to print it on one of Canon’s display printers.</p><p>To achieve that user experience, we built a backend application that used Canon’s SDK and acted as a bridge between the camera and the frontend tablet. We had a second backend application for the printer service as the point of connection to the printers. Lastly, the frontend tablet interfaced with both backend services, as well as xpkit. </p>",
+        "body": "<p>The Photo Booth experience was a collection of applications that facilitated capturing, saving, and printing images. The user would scan their QR code and take pictures using one of Canon’s premium DSLR cameras. The image would then appear on the tablet and give them the option to either save the picture or retake it. Once the user saved the image, it would be sent to their Canon Passport, and they also had the option to print it on one of Canon’s display printers.</p><p>To achieve that user experience, we built a backend application that used Canon’s SDK and acted as a bridge between the camera and the frontend tablet. We had a second backend application for the printer service allowing the tablets to send data to be printed. Lastly, the frontend tablet application served as a dashboard for participants, as well as communicating with both backend services previously mentioned.</p>",
         "backgroundColor": "#EBECED",
         "textColor": "#667084"
       },
@@ -81,12 +79,11 @@
     "skills": "Angular, Scss, ThreeJS, Augmented Reality",
     "employer": "Imagination",
     "client": "Aptiv",
-    "date": "October 2020 - Present",
     "role": "Frontend Developer",
     "heroPos": "84% 90%",
     "heroImg": "hero.jpg",
     "tileImg": "tile.jpg",
-    "body": "<p>As a result of the Covid-19 pandemic, many companies had to switch their strategies from physical , in-person events to online virtual events - Aptiv was no exception. To stand out in the sea of virtual events that took over the industry, we created a fully immersive, augmented reality tool to showcase Aptiv’s complex offerings and bring a surprise-and-delight factor to the regular virtual meeting.</p><p>The goal was to mimic a hands-on experience, giving users a 360 degree view of their smart vehicle architecture and allowing them to click on hotspots to zero in on individual parts of the technology. Each hotspots features a 3D model for users to manipulate on their own screen or launch in AR to see them in their own environment.</p>",
+    "body": "<p>As a result of the Covid-19 pandemic, many companies had to switch their strategies from physical, in-person events to online virtual events. Aptiv was no exception. To stand out in the sea of virtual events that took over the industry, we created an augmented reality tool to showcase Aptiv’s complex offerings and bring a surprise-and-delight factor to the regular virtual meeting.</p><p>The goal was to mimic a hands-on experience, giving users a 360 degree view of their smart vehicle architecture and allowing them to click on hotspots to zero in on individual parts of the technology. Each hotspots features a 3D model for users to manipulate on their own screen or launch in AR to see them in their own environment.</p>",
     "sections": [
       {
         "layout": "image",
@@ -96,7 +93,7 @@
       {
         "layout": "text",
         "title": "Technical Details",
-        "body": "<p>The application was built with Angular as the framework, google’s modelviewer for the augmented reality piece, and threejs to handle the 3d models, hotspots, and animations. It’s completely responsive to all screen sizes, and the call to action for the augmented reality will either render a QR code to scan or a button to click depending on if the device has the required hardware for AR. We completed the first phase of the project in October 2020 and continue to iterate as the client finds more uses for the tool.</p>",
+        "body": "<p>The application was built with Angular, using three.js to handle the 3d models, hotspots, and animations, and Google’s <model-viewer> for the augmented reality piece. It’s completely responsive to all screen sizes, and detects screen type to properly guide the user on how to launch the AR models. </p>",
         "backgroundColor": "#EBECED",
         "textColor": "#667084"
       },
@@ -107,7 +104,7 @@
       {
         "layout": "text",
         "title": "Outcome",
-        "body": "<p>Coming Soon</p>",
+        "body": "<p>The first phase of the project was completed in October 2020 and debuted at the all-virtual CES conference in 2021 that reached over 10,000 attendees in total between customer, employees and other stakeholders. We continued to iterate on the tool as clients expanded its use across the company and delivered a similar tool for Motional - the autonomous driving join venture between Aptiv and Hyundai - later that year. </p>",
         "backgroundColor": "#EBECED",
         "textColor": "#667084"
       },
@@ -128,9 +125,8 @@
     "role": "Fullstack Developer",
     "employer": "Imagination",
     "client": "Ford / Lincoln",
-    "date": "July 2021 - Present",
     "skills": "Angular, Scss, Django, Ansible, Docker",
-    "body": "<p>Upon the return of auto shows during the summer of 2021, one of Ford’s goals was to make vehicle information on the stand more accessible and easier to navigate. Normally spec information is put on a tablet in front of the vehicle. However, this limits the interactions visitors have with the app and also allows for only one user at a time.</p><p>So for the new season of auto shows, we built Ford’s new mobile spec pods. Visitors can scan a QR code and interact with the information on their own devices, as well as explore additional information using links within the application. Not only does this make the app more user friendly, but it also eliminates the need for community tablets - a practice that has been frowned upon since the pandemic began.</p><p>Since the launch of the mobile spec pods, we have now expanded the application to have a variety of versions and styles depending on the needs of a given show.</p>",
+    "body": "<p>Upon the return of auto shows during the summer of 2021, one of Ford’s goals was to make vehicle information on the stand more accessible and easier to navigate. Normally spec information is put on a tablet in front of the vehicle. However, this limits the interactions visitors have with the app and also allows for only one user at a time. Additionally, Ford found that users were more hesitant to used shared devices after the COVID-19 pandemic as health and safety were on the forefront of everyone's minds.</p><p>As a result, product of this, solution for this (?) the new season of auto shows, we built Ford’s new mobile spec pods. Visitors were now able to scan a QR code and interact with the information on their own devices, as well as explore additional information using links within the application.</p>",
     "sections": [
       {
         "layout": "image",
@@ -140,7 +136,7 @@
       {
         "layout": "text",
         "title": "Technical Details",
-        "body": "<p>Coming Soon</p>",
+        "body": "<p>The spec pod application was Angular application that used deep linking to handle QR code scans. It was built with mobile as the primary use case, but completely responsive for those who chose to view the site again at home. The app was also made to WCAG AAA standards per Ford's digital standards. The content was managed using an in-house CMS system.</p>",
         "backgroundColor": "#EBECED",
         "textColor": "#667084"
       },
@@ -148,6 +144,13 @@
         "layout": "background-image",
         "backgroundImage": "mockup-1.png",
         "backgroundPos": "100% 20%"
+      },
+      {
+        "layout": "text",
+        "title": "Outcome",
+        "body": "<p>After the launch of the mobile spec pods, Ford continued to expand the application. We re-skinned the site so the same system could be used on Lincoln stands and we also created specialty versions for events like SEMA and CES where special product innovations were highlighted.</p>",
+        "backgroundColor": "#191c23",
+        "textColor": "#ffffff"
       }
     ]
   },
@@ -157,12 +160,11 @@
     "role": "Frontend Developer",
     "employer": "Imagination",
     "client": "Kingdom of Saudi Arabia",
-    "date": "September 2019",
     "heroImg": "hero.png",
     "heroPos": "56% 100%",
     "tileImg": "tile.png",
     "skills": "Angular, Scss, Storyblok CMS",
-    "body": "<p>On September 27, 2019, the Kingdom of Saudi Arabia launched their E-Visa tourism program that allowed citizens of over 50 countries to travel to Saudi Arabia. As part of the launch, Imagination organized a dazzling multi-sensory event for VIPs, media, and influencers to experience the beauty, culture, and heritage the country has to offer.</p><p>Imagination offices across the world worked together to develop various pieces of the event, both digital and physical. The US office was tasked with the home website for the event, which served as both an attractor beforehand and a wrap-up afterwards.</p>",
+    "body": "<p>On September 27, 2019, the Kingdom of Saudi Arabia launched their new e-Visa tourism program. This opened up the doors for citizens of over 50 countries to travel to Saudi Arabia for tourist purposes, an opportunity that was previously restricted. As part of the launch, Imagination organized a dazzling multi-sensory event for VIPs, media, and influencers to experience all the beauty, culture, and heritage the country had to offer.</p><p>Imagination offices across the world worked together to develop various pieces of the event, both digital and physical. The US office was tasked with making the home website for the event, which served as both an attractor beforehand and a wrap-up afterwards.</p>",
     "sections": [
       {
         "layout": "image",
@@ -172,7 +174,7 @@
       {
         "layout": "text",
         "title": "Technical Details",
-        "body": "The website is an Angular application that’s fully responsive and cross-browser compatible. The website uses Storyblok as the CMS for all text and images and uses Amazon S3 for hosting. We built the site on a particularly tight timeline, with only 3 weeks for development and 1 week for QA. A true race-against-the-clock project!",
+        "body": "The website was an Angular application that was fully responsive and cross-browser compatible. The website used Storyblok as the CMS for all text and images and Amazon S3 for hosting. We built the site on a particularly tight timeline, with only 3 weeks for development and 1 week for QA. A true race-against-the-clock project!",
         "backgroundColor": "#EBECED",
         "textColor": "#667084"
       },
@@ -194,11 +196,10 @@
     "heroImg": "hero.png",
     "heroPos": "center 40%",
     "tileImg": "tile.png",
-    "body": "<p>Canon’s Passport experience is an application used at live shows and events that allow participants to track their journey and save information as they visit different touchpoints on the stand. Users can simply scan their QR code and the visit is saved to their profile, which can later be accessed through their own personalized ‘souvenir site’. Additionally, to help guide participants through the digital experience, emails are sent out once they register, notify them of specific souvenirs they may have collected, and introduce them to their souvenir site once the show has ended.</p><p>The application was used for most Canon events from 2019-2020 , most notably the Consumer Electronics Show (2019 and 2020), the Albuquerque Balloon Fiesta (2019), and  the National Association of Broadcasters Show (2019).</p>",
+    "body": "<p>Canon’s Passport experience was an application used at live shows and events that allowed participants to track their journey and save information as they visited different touchpoints on the stand. Users were taken through a quick registration process then sent a QR code, which they scanned to save visits to their profile, which could later be accessed through their own personalized ‘souvenir site’. Additionally, to help guide participants through the digital experience, emails were sent out once they registered, notified them of specific souvenirs they may have collected, and introduced them to their souvenir site once the show ended.</p><p>The application was used for most Canon events from 2019-2020 , most notably the Consumer Electronics Show (2019 and 2020), the Albuquerque Balloon Fiesta (2019), and the National Association of Broadcasters Show (2019).</p>",
     "skills": "Angular, Scss",
     "employer": "Imagination",
     "client": "Canon",
-    "date": "May 2019 - February 2020",
     "role": "Frontend Developer, Onsite Support",
     "sections": [
       {
@@ -208,8 +209,8 @@
       },
       {
         "layout": "text",
-        "title": "Xpkit Software Suite",
-        "body": "Behind the passport experience is a suite of software services created by Imagination called Xpkit. This API framework is the bread and butter of the passport system, allowing businesses to connect every touchpoint across the customer journey, enabling them to measure, analyze, and improve every step using real-time data. All this data feeds into an analytics platform that’s used to visualize key metrics such as visitor numbers, dwell time, content views, and interactions.",
+        "title": "Technical Details",
+        "body": "Behind the passport experience is an internal suite of software services created by Imagination. This API framework is the bread and butter of the passport system, allowing businesses to connect every touchpoint across the customer journey, enabling them to measure, analyze, and improve every step using real-time data. All this data feeds into an analytics platform that’s used to visualize key metrics such as visitor numbers, dwell time, content views, and interactions.",
         "backgroundColor": "#191C23"
       }
     ]
@@ -224,7 +225,6 @@
     "skills": "OpenLayers, OpenStreetMap, Jinja, Jenkins, Jira, Gulp",
     "employer": "Critical Mass",
     "client": "Nissan",
-    "date": "March 2022 - June 2022",
     "role": "Tech Lead",
     "sections": [
       {
@@ -250,7 +250,6 @@
     "skills": "Gatsby.js, styled-components, Jenkins, Jira",
     "employer": "Critical Mass",
     "client": "Nissan",
-    "date": "October 2022 - December 2022",
     "role": "Tech Lead",
     "sections": [
       {

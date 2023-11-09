@@ -42,15 +42,18 @@
   .split__code {
     height: 100%;
     position: absolute;
-    right: -320%;
+    transform: translateX(60%);
+    // right: -320%;
+    
     top: 36%;
     z-index: 1;
   }
 
   .split__color {
+    transform: translateX(-60%);
     height: 150%;
     position: absolute;
-    left: -430%;
+    // left: -430%;
     top: -63%;
   }
 

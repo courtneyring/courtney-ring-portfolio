@@ -55,7 +55,7 @@
     display: flex;
     // transform: translateX(100%);
     position: absolute;
-    left: 100%;
+    left: 110%;
     // height: 100%;
     // min-width: 100%;
     // width: 100%
@@ -66,6 +66,8 @@
     height: 30vw;
     min-width: 30vw;
     margin-right: 10vw;
+    
+    // box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.3);
     // cursor: pointer
   }
 
@@ -73,9 +75,12 @@
     background-color: grey;
     height: 100%;
     min-width: 100vw;
-    transform: translateX(100vw);
+    transform: translateX(110vw);
     position: absolute;
     pointer-events: none;
+
+    &.grid__tile { border-radius: 0px;}
+
   }
 
   .portfolio__header {
@@ -96,6 +101,9 @@
     justify-content: center;
     position: relative;
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 
     &::before {
       content: '';
@@ -128,7 +136,6 @@
     height: 100%;
     position: relative;
     width: 100%;
-
     transition: all 0.5s ease;
 
     &::before {

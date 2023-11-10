@@ -39,12 +39,8 @@ const splitEntrance = () => {
       // markers: true,
     },
   })
-  // const codePos = isMobile() ? '-211%' : '-60%';
-  // const colorPos = isMobile() ? '-300%' : '-70%';
-  // const codePos = isMobile() ? '-160vw' : '-60%';
-  // const colorPos = isMobile() ? '-245vw' : '-70%';
-  const codePos = isMobile() ? '30%' : 60;
-  const colorPos = isMobile() ? '-30%' : 60;
+  const codePos = isMobile() ? '30%' : '60%';
+  const colorPos = isMobile() ? '-30%' : '-50%';
   tl.to('.split__code', { x: codePos, immediateRender: false, duration: 1 }, 0)
   tl.to('.split__color', { x: colorPos, immediateRender: false, duration: 1 }, 0)
   tl.to('.split__content', { marginTop: -100, opacity: 1, immediateRender: false, duration: 1 }, 0)
@@ -93,15 +89,15 @@ const splitExit = () => {
   for (let i = 0; i < 3; i++) {
     tl.add(() => {
       let innerTimeline = gsap.timeline({ease: 'power4.inOut'});
-      timelineCopy.forEach((el) => innerTimeline.to(el, { textShadow: '0px 0 0 black', color: 'grey'}, 0));
-      innerTimeline.to(timelineCopy[i], { textShadow: '1px 0 0 black', color: 'black'}, '<')
+      timelineCopy.forEach((el) => innerTimeline.to(el, { textShadow: '0px 0 0 #7a89ab', color: 'grey'}, 0));
+      innerTimeline.to(timelineCopy[i], { textShadow: '1px 0 0 #7a89ab', color: '#7a89ab', duration: 0.5}, 0)
       timelineImageSets.forEach((el, idx) => {
         if (idx != i) {
-          innerTimeline.to(el, { opacity: 0, duration: 0.5, }, '<')
+          innerTimeline.to(el, { opacity: 0, duration: 0.5, }, 0)
         }
        
       })
-      innerTimeline.to(timelineImageSets[i], {opacity: 1, duration: 0.5}, '<')
+      innerTimeline.to(timelineImageSets[i], {opacity: 1, duration: 0.5}, 0)
       timelineMobileCopy.forEach((el) => innerTimeline.to(el, { opacity: 0 }, 0));
       innerTimeline.to(timelineMobileCopy[i], {opacity: 1}, 0);
 
@@ -118,7 +114,7 @@ const splitExit = () => {
   tl.to('.timeline', {
     visibility: 'hidden'
   }, '>')
-  tl.to('.portfolio__header', { visibility: 'visible' }, '<')
+tl.to('.portfolio', {visibility: 'visible'}, '<')
   tl.to('.featured__card', {
     // scale: 0.3, 
     height: () => .3 * window.innerWidth,

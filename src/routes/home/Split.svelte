@@ -14,6 +14,7 @@
 <style lang="scss">
   .split {
     align-items: center;
+    // background-color: #20232c;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -22,6 +23,7 @@
   }
 
   .split__content {
+    // color: white;
     opacity: 0;
     position: absolute;
     text-align: center;
@@ -55,6 +57,7 @@
     position: absolute;
     // left: -430%;
     top: -63%;
+    opacity: 0.3
   }
 
   @media (min-width: 922px) {
@@ -68,12 +71,14 @@
     .split__code {
       height: 120%;
       position: absolute;
-      right: -100%;
+      transform: translateX(100%);
+      // right: -100%;
       top: unset;
     }
     .split__color {
       height: 150%;
-      left: -130%;
+      transform: translateX(-100%);
+      // left: -130%;
       top: unset;
     }
   }

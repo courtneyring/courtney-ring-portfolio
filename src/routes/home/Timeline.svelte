@@ -5,7 +5,7 @@
 
 <section class="timeline">
   <h2 class="timeline__header">
-    With a background in software development and tech leadership
+    With a background in tech leadership and software development
   </h2>
   <div class="timeline__center">
     <div class="timeline__content">
@@ -54,6 +54,8 @@
     justify-content: flex-start;
     transform: scale(0.1);
     opacity: 0;
+    background-color: #20232c;
+    color: white;
   }
 
   .timeline__header {
@@ -111,8 +113,6 @@
     & > span {
       font-weight: 700;
     }
-
-    
   }
 
   .timeline__copy {
@@ -120,13 +120,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 16px;
 
     & .timeline__year,
     .timeline__description {
       font-weight: inherit;
       color: inherit;
     }
-
 
     // & > span {
     //   font-weight: inherit;
@@ -135,13 +135,13 @@
   }
 
   .timeline__hr {
-    border-left: 1px solid black;
+    border-left: 3px solid #7a89ab;
     height: 30px;
   }
 
   .timeline__vr {
     height: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid #7a89ab;
   }
 
   .timeline__diagram {
@@ -157,7 +157,6 @@
     &:first-child {
       opacity: 1;
     }
-
   }
 
   .timeline__image {
@@ -211,11 +210,9 @@
     .timeline__block {
       flex-direction: row;
       margin-bottom: 80px;
-
-     
     }
     .timeline__hr {
-      border-top: 1px solid black;
+      border-top: 1px solid #7a89ab;
       border-left: 0px;
       height: unset;
       width: 50px;
@@ -223,7 +220,7 @@
 
     .timeline__vr {
       border-bottom: 0px;
-      border-left: 1px solid black;
+      border-left: 1px solid #7a89ab;
     }
 
     .timeline__content {

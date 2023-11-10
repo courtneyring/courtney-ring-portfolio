@@ -37,10 +37,13 @@
 <style lang="scss">
   .portfolio {
     align-items: center;
+    // background-color: white;
+
     display: flex;
     justify-content: center;
     min-width: 100%;
     overflow: hidden;
+    visibility: hidden;
   }
 
   .all__cards {
@@ -78,18 +81,17 @@
     transform: translateX(110vw);
     position: absolute;
     pointer-events: none;
+    visibility: visible;
 
     &.grid__tile { border-radius: 0px;}
 
   }
 
-  .portfolio__header {
-  }
 
   .portfolio__header {
     position: absolute;
     top: 10%;
-    visibility: hidden;
+    // visibility: hidden;
     text-align: center;
   }
 

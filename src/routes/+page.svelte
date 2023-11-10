@@ -7,13 +7,11 @@
     return {title, id, tileImg}
   })
 
-  gtag('event', 'page-view', {
-    "page-name": 'home'
-  })
+
 </script>
 
 <svelte:head>
-  <title>Home</title>
+  <title>Courtney Ring | Creative Technologist</title>
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 

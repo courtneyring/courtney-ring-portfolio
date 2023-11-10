@@ -20,11 +20,6 @@
 
 
 
-  gtag('event', 'page-view', {
-    "page-name": 'work',
-    "project": id
-  })
-
   const routeToNext = () => {
     goto(`/work/${nextProject.id}`)
   }
@@ -43,6 +38,11 @@
     return style;
   };
 </script>
+
+<svelte:head>
+  <title>Courtney Ring | Work | {content.title}</title>
+  <meta name="description" content="Svelte demo app" />
+</svelte:head>
 
 <a class='work__back' href='/'>
     <img src={arrowRight} />

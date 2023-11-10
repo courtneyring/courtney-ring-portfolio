@@ -18,6 +18,13 @@
   $: nextIdx = currentIdx == copy.length - 1 ? 0 : currentIdx + 1;
   $: nextProject = copy[nextIdx];
 
+
+
+  gtag('event', 'page-view', {
+    "page-name": 'work',
+    "project": id
+  })
+
   const routeToNext = () => {
     goto(`/work/${nextProject.id}`)
   }

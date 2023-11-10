@@ -7,6 +7,9 @@
     return {title, id, tileImg}
   })
 
+  gtag('event', 'page-view', {
+    "page-name": 'home'
+  })
 </script>
 
 <svelte:head>

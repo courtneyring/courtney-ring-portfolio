@@ -30,14 +30,15 @@
     z-index: 2;
 
     & h2 {
-      font-size: 45px;
+      font-size: 20px;
+      line-height: 30px;
     }
 
     & span {
       font-size: inherit;
       display: block;
       font-weight: 700;
-      margin: 30px 0px;
+      
     }
   }
 
@@ -64,6 +65,7 @@
     .split__content h2 {
       font-size: 80px;
       & > span {
+        margin: 30px 0px;
         margin: 0px;
       }
     }

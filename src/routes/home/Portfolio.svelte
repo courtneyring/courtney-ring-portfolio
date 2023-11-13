@@ -44,6 +44,7 @@
     min-width: 100%;
     overflow: hidden;
     visibility: hidden;
+    padding: 0px;
   }
 
   .all__cards {

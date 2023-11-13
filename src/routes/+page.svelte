@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { initAnimations } from './animations.js';
-  import { Split, Timeline, Portfolio, Landing } from './home';
+  import { Split, Background, Portfolio, Landing } from './home';
 
   onMount(() => {
     initAnimations();
@@ -17,7 +17,7 @@
 <Landing />
 <div class="pinned">
   <Split />
-  <Timeline />
+  <Background />
   <Portfolio />
 </div>
 

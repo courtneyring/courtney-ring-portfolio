@@ -11,6 +11,7 @@
     "marks": [
       {
         "year": "2017",
+        "headline": "Tracer",
         "description": "I started in the agency world as a frontend developer. Here I made data visualizations using D3 and _________",
         "images": [
           "/work/aptiv-sva/tile.jpg",
@@ -20,6 +21,7 @@
       },
       {
         "year": "2019",
+        "headline": "Imagination",
         "description": "I gained a passion for all things experiential at Imagination. Here I worked across a variety of technologies and ______",
         "images": [
           "/work/ford-drive/tile.png",
@@ -29,6 +31,7 @@
       },
       {
         "year": "2022",
+        "headline": "Critical Mass",
         "description": "Critical Mass has put me In a role that allows me to be the digital perspective in the creative process. I bring my technical expertise to help bring ideas to life",
         "images": [
           "/work/aptiv-sva/tile.jpg",

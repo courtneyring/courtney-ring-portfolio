@@ -52,7 +52,7 @@ const splitExit = () => {
 
   let timelineCopy = document.querySelectorAll(`.timeline__block > .timeline__copy`);
   let timelineMobileCopy = document.querySelectorAll('.timeline__description-mobile')
-  let timelineImageSets = document.querySelectorAll(`.timeline__image-set`);
+  let timelineImageSets = document.querySelectorAll(`.background__image-set`);
 
   let tl = gsap.timeline({
     ease: 'power1.inOut',
@@ -78,7 +78,7 @@ const splitExit = () => {
     duration: 4,
   }, '<')
 
-  tl.to('.timeline', {
+  tl.to('.background', {
     scale: 1,
     duration: 5,
     opacity: 1
@@ -86,11 +86,13 @@ const splitExit = () => {
   tl.to('.split__content', {
     visibility: 'hidden'
   }, '>')
+  const activeColor = 'white';
+  const inactiveColor = '#7a89ab';
   for (let i = 0; i < 3; i++) {
     tl.add(() => {
       let innerTimeline = gsap.timeline({ease: 'power4.inOut'});
-      timelineCopy.forEach((el) => innerTimeline.to(el, { textShadow: '0px 0 0 #7a89ab', color: 'grey'}, 0));
-      innerTimeline.to(timelineCopy[i], { textShadow: '1px 0 0 #7a89ab', color: '#7a89ab', duration: 0.5}, 0)
+      timelineCopy.forEach((el) => innerTimeline.to(el, {  color: inactiveColor }, 0));
+      innerTimeline.to(timelineCopy[i], {  color: activeColor, duration: 0.5}, 0)
       timelineImageSets.forEach((el, idx) => {
         if (idx != i) {
           innerTimeline.to(el, { opacity: 0, duration: 0.5, }, 0)
@@ -111,7 +113,7 @@ const splitExit = () => {
     x: 0,
     duration: 3
   }, '+=5')
-  tl.to('.timeline', {
+  tl.to('.background', {
     visibility: 'hidden'
   }, '>')
 tl.to('.portfolio', {visibility: 'visible'}, '<')

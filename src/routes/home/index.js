@@ -1,11 +1,11 @@
 import Split from './Split.svelte';
-import Timeline from './Timeline.svelte';
+import Background from './Background.svelte';
 import Portfolio from './Portfolio.svelte';
 import Landing from './Landing.svelte';
 
 export {
   Split,
-  Timeline, 
+  Background, 
   Portfolio,
   Landing
 }

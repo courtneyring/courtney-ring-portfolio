@@ -81,6 +81,11 @@ h3 {
   line-height: 30px;
 }
 
+p {
+  font-size: 14px;
+  margin: 0;
+}
+
 .pinned>section {
   position: absolute;
   width: 100%;
@@ -94,7 +99,7 @@ section {
   display: flex;
   align-items: center;
   height: 100vh;
-  padding: 30px 15px;
+  padding: 15px;
 }
 
 
@@ -122,14 +127,18 @@ section {
   }
 
   h2 {
-    font-size: 80px;
+    font-size: 70px;
   }
 
   h3 {
     font-size: 30px;
   }
 
+  p {
+    font-size: 20px;
+  }
+
   section {
-    padding: 0px 50px;
+    padding: 50px 50px 0px;
   }
 }

@@ -18,6 +18,8 @@
   $: nextIdx = currentIdx == copy.length - 1 ? 0 : currentIdx + 1;
   $: nextProject = copy[nextIdx];
 
+
+
   const routeToNext = () => {
     goto(`/work/${nextProject.id}`)
   }
@@ -36,6 +38,11 @@
     return style;
   };
 </script>
+
+<svelte:head>
+  <title>Courtney Ring | Work | {content.title}</title>
+  <meta name="description" content="Svelte demo app" />
+</svelte:head>
 
 <a class='work__back' href='/'>
     <img src={arrowRight} />

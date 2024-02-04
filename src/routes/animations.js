@@ -11,14 +11,14 @@ console.log(isMobile)
 
 const landingEntranceAnimations = () => {
   const tl = gsap.timeline({ ease: 'power1.inOut' });
-  tl.to(
-    '.landing__subtext',
-    {
-      duration: 1,
-      text: 'aka: A computer nerd with a passion for cool experiences',
-    },
-    0
-  );
+  // tl.to(
+  //   '.landing__subtext',
+  //   {
+  //     duration: 1,
+  //     text: 'aka: A computer nerd with a passion for cool experiences',
+  //   },
+  //   0
+  // );
   tl.to(
     '.landing__content',
     {
@@ -68,51 +68,51 @@ const splitExit = () => {
     },
   }, 0)
 
-  tl.to('.split__content', {
-    scale: 30,
-    duration: 5,
-    // delay: 2,
-  }, '+=2')
-  tl.to('.split__background', {
-    opacity: 0,
-    duration: 4,
-  }, '<')
+  // tl.to('.split__content', {
+  //   scale: 30,
+  //   duration: 5,
+  //   // delay: 2,
+  // }, '+=2')
+  // tl.to('.split__background', {
+  //   opacity: 0,
+  //   duration: 4,
+  // }, '<')
 
-  tl.to('.background', {
-    scale: 1,
-    duration: 5,
-    opacity: 1
-  }, '<')
-  tl.to('.split__content', {
-    visibility: 'hidden'
-  }, '>')
-  const activeColor = 'white';
-  const inactiveColor = '#7a89ab';
-  for (let i = 0; i < 3; i++) {
-    tl.add(() => {
-      let innerTimeline = gsap.timeline({ease: 'power4.inOut'});
-      timelineCopy.forEach((el) => innerTimeline.to(el, {  color: inactiveColor }, 0));
-      innerTimeline.to(timelineCopy[i], {  color: activeColor, duration: 0.5}, 0)
-      timelineImageSets.forEach((el, idx) => {
-        if (idx != i) {
-          innerTimeline.to(el, { opacity: 0, duration: 0.5, }, 0)
-        }
+  // tl.to('.background', {
+  //   scale: 1,
+  //   duration: 5,
+  //   opacity: 1
+  // }, '<')
+  // tl.to('.split__content', {
+  //   visibility: 'hidden'
+  // }, '>')
+  // const activeColor = 'white';
+  // const inactiveColor = '#7a89ab';
+  // for (let i = 0; i < 3; i++) {
+  //   tl.add(() => {
+  //     let innerTimeline = gsap.timeline({ease: 'power4.inOut'});
+  //     timelineCopy.forEach((el) => innerTimeline.to(el, {  color: inactiveColor }, 0));
+  //     innerTimeline.to(timelineCopy[i], {  color: activeColor, duration: 0.5}, 0)
+  //     timelineImageSets.forEach((el, idx) => {
+  //       if (idx != i) {
+  //         innerTimeline.to(el, { opacity: 0, duration: 0.5, }, 0)
+  //       }
        
-      })
-      innerTimeline.to(timelineImageSets[i], {opacity: 1, duration: 0.5}, 0)
-      timelineMobileCopy.forEach((el) => innerTimeline.to(el, { opacity: 0 }, 0));
-      innerTimeline.to(timelineMobileCopy[i], {opacity: 1}, 0);
+  //     })
+  //     innerTimeline.to(timelineImageSets[i], {opacity: 1, duration: 0.5}, 0)
+  //     timelineMobileCopy.forEach((el) => innerTimeline.to(el, { opacity: 0 }, 0));
+  //     innerTimeline.to(timelineMobileCopy[i], {opacity: 1}, 0);
 
    
-    }, i == 0 ? '<' : '+=3')
+  //   }, i == 0 ? '<' : '+=3')
   
 
-  }
+  // }
 
   tl.to('.featured__card', {
     x: 0,
     duration: 3
-  }, '+=5')
+  }, '>')
   tl.to('.background', {
     visibility: 'hidden'
   }, '>')
@@ -144,7 +144,7 @@ tl.to('.portfolio', {visibility: 'visible'}, '<')
 
 const initAnimations = () => {
   landingEntranceAnimations();
-  splitEntrance();
+  // splitEntrance();
   splitExit();
 };
 

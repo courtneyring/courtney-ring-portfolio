@@ -11,13 +11,13 @@
 
 <svelte:head>
   <title>Courtney Ring | Creative Technologist</title>
-  <meta name="description" content="Svelte demo app" />
+  <meta name="description" content="Courtney Ring | Creative Technologist" />
 </svelte:head>
 
 <Landing />
 <div class="pinned">
-  <Split />
-  <Background />
+  <!-- <Split /> -->
+  <!-- <Background /> -->
   <Portfolio />
 </div>
 

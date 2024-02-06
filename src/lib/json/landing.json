@@ -1,6 +1,6 @@
 {
   "hero": {
-    "eyebrow": "Technology Lead • Creative Technologist • Software Engineer",
+    "eyebrow": ["Technology Lead", "Creative Technologist", "Software Engineer"],
     "title": "Courtney Ring"
   },
   "about": {

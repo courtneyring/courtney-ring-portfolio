@@ -4,6 +4,11 @@ import Header from './Header.svelte';
 import Nav from './Nav.svelte';
 import FactBox from './FactBox.svelte';
 import ProjectSection from './ProjectSection.svelte';
+import Card from './Card.svelte';
+import TitleBlock from './TitleBlock.svelte';
+import Button from './Button.svelte';
+import CardBlock from './CardBlock.svelte';
+import Container from './Container.svelte';
 
 
 
@@ -13,5 +18,10 @@ export {
   Footer,
   Nav,
   FactBox,
-  ProjectSection
+  ProjectSection,
+  Card,
+  TitleBlock, 
+  Button, 
+  CardBlock,
+  Container
 }

@@ -1,9 +1,10 @@
 <script>
   export let project;
+  export let node;
 </script>
 
-<a class='card' href='/work/{project.id}'>
-  <div class='card__image' style='background-image: url(/work/{project.id}/{project.tileImg}'></div>
+<a class='card' href='/work/{project.id}' bind:this={node}>
+  <div class='card__image' style='background-image: url(/work/{project.id}/{project.heroImg}'></div>
 </a>
 
 

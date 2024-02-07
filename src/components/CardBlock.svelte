@@ -4,25 +4,31 @@
   import TitleBlock from './TitleBlock.svelte';
   import gsap from 'gsap';
   export let project;
+  export let reverse;
+  let titleBlockRef;
+  let cardRef;
+  let parentRef;
 
+  console.log(project)
   onMount(() => {
-    gsap.from('.title-block', {
+
+    gsap.from(titleBlockRef, {
       opacity: 0,
       duration: 1,
-      x: '-5vw',
+      x: reverse ? '5vw' : '-5vw',
       scrollTrigger: {
-        trigger: '.card-block',
+        trigger: parentRef,
         start: 'top center'
       },
     });
 
-    gsap.from('.card', {
+    gsap.from(cardRef, {
       duration: 1,
-      rotate: '10deg',
-      x: '10vw', 
+      rotate: reverse ? '-10deg' : '10deg',
+      x: reverse ? '-10vw' : '10vw', 
       opacity: 0,
       scrollTrigger: {
-        trigger: '.card-block',
+        trigger: parentRef,
         start: 'top center'
       },
     })
@@ -31,9 +37,9 @@
 </script>
 
 <!-- <div class="container"> -->
-  <div class="card-block">
-    <TitleBlock></TitleBlock>
-    <Card {project}></Card>
+  <div class="card-block {reverse && 'reverse'}" bind:this={parentRef}>
+    <TitleBlock bind:node={titleBlockRef} title={project.shortTitle} subtitle={project.subtitle} rightAligned={reverse}></TitleBlock>
+    <Card bind:node={cardRef} {project}></Card>
   </div>
 <!-- </div> -->
 
@@ -41,6 +47,11 @@
   .card-block {
     display: flex;
     justify-content: space-between;
+    padding: 50px 0px;
     width: 100%;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
   }
 </style>

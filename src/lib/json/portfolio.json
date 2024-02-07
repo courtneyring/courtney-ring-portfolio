@@ -2,6 +2,9 @@
   {
     "id": "ford-drive",
     "title": "Ford Built Wild & Built to Electrify",
+    "shortTitle": "Ford Built Wild",
+    "subtitle": "lorem ipsum",
+    "featured": true,
     "body": "<p>When autoshows returned after Covid during the summer of 2021, Ford wanted to make a big impression for its flashiest cars - the Bronco and the Mach-E.</p><p>TThe Bronco draws customers in because of its off-roading capabilities and Ford wanted to demonstrate just that. Imagination designed and built an obstacle course ending with “The Mountain” to showcase the Bronco’s peak incline and decline angles.</p><p>The Mach-E is Ford’s electric sports car with an impressive ability to accelerate from 0-60 in 3.5 seconds. With this same desire to show off peak performance, Ford had a runway for drivers to put the pedal to the metal and allow participants to feel the speed for themselves.</p><p>In both cases, Ford wanted customers to have a digital souvenir to go home with to remember these experiences. So as part of the activation, we built an application that records visitors’ reaction at the exact moment of surprise and delight and programmatically edit the video for a keepsake they could view and share afterwards.</p>",
     "heroImg": "hero.png",
     "heroPos": "center 35%",
@@ -45,6 +48,9 @@
   {
     "id": "canon-photobooth",
     "title": "Canon Photo Booth Experience",
+    "shortTitle": "Canon Co-Create",
+    "subtitle": "lorem ipsum",
+    "featured": true,
     "body": "<p>For CES 2020, Canon had plans to create a flashy centralized fashion show lined with cameras as a fun way to demo their offerings. However, they wanted to make the experience more personalized, so we added a digital component to the activation that would allow the participants to save their images to their Canon Passport profile. With this functionality, users were able to revisit the photos after the show, and this also allowed Canon to collect leads from those who visited the stand.</p><p>In addition to increasing participant engagement and lead generation, this application also showcased the abilities of Canon's Software Development Kit. In our particular case, we used it to send data between the cameras and nearby tablets, as well as control the cameras from the tablets themselves.</p>",
     "heroImg": "hero.png",
     "heroPos": "59% center",
@@ -75,6 +81,9 @@
   {
     "id": "aptiv-sva",
     "title": "Aptiv Virtual Tool",
+    "shortTitle": "Aptiv SVA Becoming Reality",
+    "subtitle": "lorem ipsum",
+    "featured": true,
     "skills": "Angular, Scss, ThreeJS, Augmented Reality",
     "employer": "Imagination",
     "client": "Aptiv",

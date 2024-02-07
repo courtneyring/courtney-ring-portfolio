@@ -6,13 +6,14 @@
   import portfolio from '$lib/json/portfolio.json';
   import gsap from 'gsap';
   import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-    import TitleBlock from '../components/TitleBlock.svelte';
   gsap.registerPlugin(ScrollTrigger);
 
-  const tiles = portfolio.map((project) => {
-    let { title, id, tileImg } = project;
-    return { title, id, tileImg };
+  const projects = portfolio.filter((p) => p.featured).map((project) => {
+    let { shortTitle, subtitle, id, heroImg } = project;
+    return { shortTitle, subtitle, id, heroImg };
+    
   });
+
 
   let letters = content.hero.title.split('');
   letters.find((letter) => letter == '');
@@ -77,7 +78,9 @@
 
   <div class="container">
     <Header title="Recent Work"  />
-    <CardBlock project={tiles[0]}/>
+    {#each projects as project, index}
+      <CardBlock project={project} reverse={index%2 == 0}/>
+    {/each}
 
     <!-- <ImageGrid {tiles} /> -->
   </div>

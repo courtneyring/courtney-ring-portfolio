@@ -1,14 +1,33 @@
 <script>
   import Button from './Button.svelte';
+  export let node;
+  export let title;
+  export let subtitle;
+  export let rightAligned;
+
 </script>
 
-<div class="title-block">
-  <h4>Built Wild</h4>
-  <p>Subtitle</p>
+<div class="title-block {rightAligned && 'right-aligned'}" bind:this={node}>
+  <h4>{title}</h4>
+  <p>{subtitle}</p>
   <Button>View Project</Button>
 </div>
 
 <style lang="scss">
+
+  .title-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &.right-aligned {
+      align-items: flex-end;
+
+      & h4 {
+        text-align: right;
+      }
+    }
+  }
 
   h4 {
     color: white;

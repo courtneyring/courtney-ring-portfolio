@@ -9,13 +9,14 @@
 
 
   onMount(() => {
-    gsap.to('.header__container', {
-      opacity: 1,
-      y: 0,
+    gsap.from('.header__container', {
+      opacity: 0,
+      y: '2vh',
       duration: 0.5,
       scrollTrigger: {
         trigger: '.header__container',
-        start: 'top center'
+        start: 'top bottom-=20%',
+        markers: true
       },
     });
 
@@ -34,8 +35,8 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 50px;
-    transform: translateY(2vh);
-    opacity: 0;
+    // transform: translateY(2vh);
+    // opacity: 0;
   }
 
   .header__title {
@@ -43,6 +44,7 @@
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 30px;
+    // margin-top: 0px;
     text-align: center;
     // opacity: 0;
   }

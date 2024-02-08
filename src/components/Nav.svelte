@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: toRem(80);
+    height: 80px;
     position: sticky;
     top: 0;
     width: 100%;
@@ -41,7 +41,7 @@
   }
 
   nav {
-    padding: toRem(10) toRem(30);
+    padding: 10px 30px;
   }
 
   nav > ul {
@@ -50,7 +50,7 @@
   }
 
   li {
-    margin: toRem(0) toRem(10);
+    margin: 0px 10px;
   }
 
   a {

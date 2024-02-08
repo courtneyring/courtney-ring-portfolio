@@ -1,29 +1,39 @@
 <script>
+  import { onMount, onDestroy } from 'svelte';
+  // import {gsap, ScrollTrigger} from 'gsap/all';
+  // import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+  // gsap.registerPlugin(ScrollTrigger);
+    // import {gsap, ScrollTrigger} from '../lib/utils/gsap.js';
+
   export let title;
   export let dark;
 
-  import { onMount } from 'svelte';
-  import gsap from 'gsap';
-  import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-  gsap.registerPlugin(ScrollTrigger);
+  let containerNode;
 
 
-  onMount(() => {
-    gsap.from('.header__container', {
-      opacity: 0,
-      y: '2vh',
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: '.header__container',
-        start: 'top bottom-=20%',
-        markers: true
-      },
-    });
+  // onMount(() => {
+  //   gsap.from(containerNode, {
+  //     opacity: 0,
+  //     y: '2vh',
+  //     duration: 0.5,
+  //     scrollTrigger: {
+  //       trigger: containerNode,
+  //       start: 'top bottom-=20%',
+  //       markers: true
+  //     },
+  //   });
 
-  });
+  // });
+
+  // onDestroy(() => {
+  //   let triggers = ScrollTrigger.getAll();
+  //   triggers.forEach((trigger) => {
+  //     trigger.kill();
+  //   });
+  // });
 </script>
 
-<div class="header__container {dark ? 'dark' : ''}">
+<div class="header__container {dark ? 'dark' : ''}" ref='containerNode'>
   <h3 class="header__title">{title}</h3>
   <div class="header__divider"></div>
 </div>

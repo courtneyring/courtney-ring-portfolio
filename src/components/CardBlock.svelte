@@ -1,46 +1,63 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import Card from './Card.svelte';
   import TitleBlock from './TitleBlock.svelte';
-  import gsap from 'gsap';
+  // import {gsap, ScrollTrigger} from 'gsap/all';
+  // import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+  // gsap.registerPlugin(ScrollTrigger);
+  // import {gsap, ScrollTrigger} from '../../lib/utils/gsap.js';
   export let project;
   export let reverse;
-  let titleBlockRef;
-  let cardRef;
-  let parentRef;
 
-  console.log(project)
-  onMount(() => {
 
-    gsap.from(titleBlockRef, {
-      opacity: 0,
-      duration: 1,
-      x: reverse ? '5vw' : '-5vw',
-      scrollTrigger: {
-        trigger: parentRef,
-        start: 'top center'
-      },
-    });
+  let titleBlockNode;
+  let cardNode;
+  let parentNode;
 
-    gsap.from(cardRef, {
-      duration: 1,
-      rotate: reverse ? '-10deg' : '10deg',
-      x: reverse ? '-10vw' : '10vw', 
-      opacity: 0,
-      scrollTrigger: {
-        trigger: parentRef,
-        start: 'top center'
-      },
-    })
+  // onMount(() => {
+  //   gsap.from(titleBlockNode, {
+  //     opacity: 0,
+  //     duration: 1,
+  //     x: reverse ? '5vw' : '-5vw',
+  //     scrollTrigger: {
+  //       trigger: parentNode,
+  //       start: 'top center',
+  //     },
+  //   });
 
-  });
+  //   gsap.from(cardNode, {
+  //     duration: 1,
+  //     rotate: reverse ? '-10deg' : '10deg',
+  //     x: reverse ? '-10vw' : '10vw',
+  //     opacity: 0,
+  //     scrollTrigger: {
+  //       trigger: parentNode,
+  //       start: 'top center',
+  //     },
+  //   });
+  // });
+
+  // onDestroy(() => {
+  //   let triggers = ScrollTrigger.getAll();
+  //   triggers.forEach((trigger) => {
+  //     trigger.kill();
+  //   });
+  // });
 </script>
 
 <!-- <div class="container"> -->
-  <div class="card-block {reverse && 'reverse'}" bind:this={parentRef}>
-    <TitleBlock bind:node={titleBlockRef} title={project.shortTitle} subtitle={project.subtitle} rightAligned={reverse}></TitleBlock>
-    <Card bind:node={cardRef} {project}></Card>
-  </div>
+<div class="card-block {reverse && 'reverse'}" bind:this={parentNode}>
+  <TitleBlock
+    bind:node={titleBlockNode}
+    title={project.shortTitle}
+    eyebrow={project.client}
+    rightAligned={reverse}
+    ref="titleBlockRef"
+    href="/work/{project.id}"
+  ></TitleBlock>
+  <Card bind:node={cardNode} {project} ref="cardRef"></Card>
+</div>
+
 <!-- </div> -->
 
 <style lang="scss">
@@ -53,5 +70,13 @@
     &.reverse {
       flex-direction: row-reverse;
     }
+  }
+
+  :global([ref='cardRef']) {
+    width: 55%;
+    min-width: 55%;
+  }
+  :global([ref='titleBlockRef']) {
+    flex-grow: 1;
   }
 </style>

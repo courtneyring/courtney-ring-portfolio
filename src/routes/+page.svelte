@@ -1,11 +1,8 @@
 <script>
-  import { Hero, Work } from '../sections/landing/index.js';
+  import Hero from '../sections/landing/Hero.svelte';
+  import Work from '../sections/landing/Work.svelte';
   import content from '$lib/json/landing.json';
   import portfolio from '$lib/json/portfolio.json';
-
-  // import gsap from 'gsap';
-  // import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-  // gsap.registerPlugin(ScrollTrigger);
 
   const projects = portfolio
     .filter((p) => p.featured)
@@ -13,6 +10,7 @@
       let { shortTitle, subtitle, id, heroImg, client } = project;
       return { shortTitle, subtitle, id, heroImg, client };
     });
+    console.log(projects)
 </script>
 
 <svelte:head>
@@ -21,8 +19,8 @@
 </svelte:head>
 
 <div class="landing">
-  <!-- <Hero {content} />
-  <Work {projects} /> -->
+  <Hero {content} />
+  <Work {projects} />
 </div>
 
 <style lang="scss">

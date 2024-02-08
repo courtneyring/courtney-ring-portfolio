@@ -1,11 +1,9 @@
 <script>
   export let content;
   import { onDestroy, onMount } from 'svelte';
-  // import {gsap, ScrollTrigger} from '../lib/utils/gsap.js';
-    import Button from '../../components/Button.svelte';
-  // import {gsap, ScrollTrigger} from 'gsap/all';
-  // import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
-  // gsap.registerPlugin(ScrollTrigger);
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
 
   let letters = content.hero.title.split('');
   letters.find((letter) => letter == '');
@@ -19,34 +17,33 @@
     { scale: 22, y: '200vh', x: '20vw' },
   ];
 
-  // onMount(() => {
-  //   let tl = gsap.timeline({ ease: 'power1.inOut' });
-  //   for (let [idx, val] of letters.entries()) {
-  //     if (letters[idx] == ' ') continue;
-  //     tl.from(
-  //       `.hero__text > h1 > span:nth-child(${idx + 1})`,
-  //       fromPos[idx % fromPos.length],
-  //       // { scale: 1, x: 0, y: 0, duration: 0.5 },
-  //       '<+0.1',
-  //     );
-  //   }
-  //   tl.fromTo(
-  //     'h2',
-  //     { opacity: 0, y: '1vh' },
-  //     { opacity: 1, duration: 0.5, ease: 'power1.inOut', y: 0 },
-  //   );
+  onMount(() => {
+    let tl = gsap.timeline({ ease: 'power1.inOut' });
+    for (let [idx, val] of letters.entries()) {
+      if (letters[idx] == ' ') continue;
+      tl.from(
+        `.hero__text > h1 > span:nth-child(${idx + 1})`,
+        fromPos[idx % fromPos.length],
+        '<+0.1',
+      );
+    }
+    tl.fromTo(
+      'h2',
+      { opacity: 0, y: '1vh' },
+      { opacity: 1, duration: 0.5, ease: 'power1.inOut', y: 0 },
+    );
 
-  //   // return () => {
+    // return () => {
 
-  //   // };
-  // });
+    // };
+  });
 
-  // onDestroy(() => {
-  //   let triggers = ScrollTrigger.getAll();
-  //   triggers.forEach((trigger) => {
-  //     trigger.kill();
-  //   });
-  // });
+  onDestroy(() => {
+    let triggers = ScrollTrigger.getAll();
+    triggers.forEach((trigger) => {
+      trigger.kill();
+    });
+  });
 </script>
 
 <section class="hero">

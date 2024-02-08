@@ -1,5 +1,6 @@
 <script>
-  import {Nav, Footer} from '../components/index.js';
+  import Nav from '../components/Nav.svelte';
+  import Footer from '../components/Footer.svelte';
 	import './styles.scss';
 </script>
 

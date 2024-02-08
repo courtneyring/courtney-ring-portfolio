@@ -2,47 +2,46 @@
   import { onMount, onDestroy } from 'svelte';
   import Card from './Card.svelte';
   import TitleBlock from './TitleBlock.svelte';
-  // import {gsap, ScrollTrigger} from 'gsap/all';
-  // import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
-  // gsap.registerPlugin(ScrollTrigger);
-  // import {gsap, ScrollTrigger} from '../../lib/utils/gsap.js';
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
+
   export let project;
   export let reverse;
-
 
   let titleBlockNode;
   let cardNode;
   let parentNode;
 
-  // onMount(() => {
-  //   gsap.from(titleBlockNode, {
-  //     opacity: 0,
-  //     duration: 1,
-  //     x: reverse ? '5vw' : '-5vw',
-  //     scrollTrigger: {
-  //       trigger: parentNode,
-  //       start: 'top center',
-  //     },
-  //   });
+  onMount(() => {
+    gsap.from(titleBlockNode, {
+      opacity: 0,
+      duration: 1,
+      x: reverse ? '5vw' : '-5vw',
+      scrollTrigger: {
+        trigger: parentNode,
+        start: 'top center',
+      },
+    });
 
-  //   gsap.from(cardNode, {
-  //     duration: 1,
-  //     rotate: reverse ? '-10deg' : '10deg',
-  //     x: reverse ? '-10vw' : '10vw',
-  //     opacity: 0,
-  //     scrollTrigger: {
-  //       trigger: parentNode,
-  //       start: 'top center',
-  //     },
-  //   });
-  // });
+    gsap.from(cardNode, {
+      duration: 1,
+      rotate: reverse ? '-10deg' : '10deg',
+      x: reverse ? '-10vw' : '10vw',
+      opacity: 0,
+      scrollTrigger: {
+        trigger: parentNode,
+        start: 'top center',
+      },
+    });
+  });
 
-  // onDestroy(() => {
-  //   let triggers = ScrollTrigger.getAll();
-  //   triggers.forEach((trigger) => {
-  //     trigger.kill();
-  //   });
-  // });
+  onDestroy(() => {
+    let triggers = ScrollTrigger.getAll();
+    triggers.forEach((trigger) => {
+      trigger.kill();
+    });
+  });
 </script>
 
 <!-- <div class="container"> -->

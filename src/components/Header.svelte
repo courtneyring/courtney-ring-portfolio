@@ -11,15 +11,18 @@ gsap.registerPlugin(ScrollTrigger);
   let containerNode;
 
 
+
+
   onMount(() => {
+    console.log(containerNode)
     gsap.from(containerNode, {
       opacity: 0,
       y: '2vh',
       duration: 0.5,
       scrollTrigger: {
         trigger: containerNode,
-        start: 'top bottom-=20%',
-        markers: true
+        start: 'top bottom-=40%',
+        // markers: true
       },
     });
 
@@ -33,7 +36,7 @@ gsap.registerPlugin(ScrollTrigger);
   });
 </script>
 
-<div class="header__container {dark ? 'dark' : ''}" ref='containerNode'>
+<div class="header__container {dark ? 'dark' : ''}" bind:this={containerNode}>
   <h3 class="header__title">{title}</h3>
   <div class="header__divider"></div>
 </div>

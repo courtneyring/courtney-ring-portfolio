@@ -2,9 +2,10 @@
   import { onMount, onDestroy } from 'svelte';
   import Card from './Card.svelte';
   import TitleBlock from './TitleBlock.svelte';
-  import gsap from 'gsap';
-  import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-  gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
   export let project;
   export let reverse;

@@ -1,9 +1,9 @@
 <script>
   import { onMount, onDestroy } from 'svelte';
-  // import {gsap, ScrollTrigger} from 'gsap/all';
-  // import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
-  // gsap.registerPlugin(ScrollTrigger);
-    // import {gsap, ScrollTrigger} from '../lib/utils/gsap.js';
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
   export let title;
   export let dark;
@@ -11,26 +11,26 @@
   let containerNode;
 
 
-  // onMount(() => {
-  //   gsap.from(containerNode, {
-  //     opacity: 0,
-  //     y: '2vh',
-  //     duration: 0.5,
-  //     scrollTrigger: {
-  //       trigger: containerNode,
-  //       start: 'top bottom-=20%',
-  //       markers: true
-  //     },
-  //   });
+  onMount(() => {
+    gsap.from(containerNode, {
+      opacity: 0,
+      y: '2vh',
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: containerNode,
+        start: 'top bottom-=20%',
+        markers: true
+      },
+    });
 
-  // });
+  });
 
-  // onDestroy(() => {
-  //   let triggers = ScrollTrigger.getAll();
-  //   triggers.forEach((trigger) => {
-  //     trigger.kill();
-  //   });
-  // });
+  onDestroy(() => {
+    let triggers = ScrollTrigger.getAll();
+    triggers.forEach((trigger) => {
+      trigger.kill();
+    });
+  });
 </script>
 
 <div class="header__container {dark ? 'dark' : ''}" ref='containerNode'>
@@ -45,8 +45,6 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 50px;
-    // transform: translateY(2vh);
-    // opacity: 0;
   }
 
   .header__title {
@@ -54,9 +52,7 @@
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 30px;
-    // margin-top: 0px;
     text-align: center;
-    // opacity: 0;
   }
 
   .header__divider {

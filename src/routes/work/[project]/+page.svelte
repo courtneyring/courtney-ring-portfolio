@@ -44,10 +44,10 @@
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<a class='work__back' href='/'>
+<!-- <a class='work__back' href='/'>
     <img src={arrowRight} />
     Home
-</a>
+</a> -->
 
 <!-- Hero -->
 

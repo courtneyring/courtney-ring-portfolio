@@ -42,7 +42,7 @@
 
 <style lang="scss">
   footer {
-    background-color: $color-blue-dark;
+    background-color: $color-blue-medium;
     display: block;
     position: relative;
     z-index: 3;

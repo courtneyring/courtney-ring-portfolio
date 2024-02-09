@@ -10,7 +10,6 @@
       let { shortTitle, subtitle, id, heroImg, client } = project;
       return { shortTitle, subtitle, id, heroImg, client };
     });
-    console.log(projects)
 </script>
 
 <svelte:head>

@@ -63,19 +63,30 @@
   .card-block {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0px;
+    padding: 100px 0px;
     width: 100%;
-
-    &.reverse {
-      flex-direction: row-reverse;
-    }
+    flex-direction: column;
   }
 
   :global([ref='cardRef']) {
-    width: 55%;
-    min-width: 55%;
+    width: 100%;
+    min-width: 100%;
   }
   :global([ref='titleBlockRef']) {
     flex-grow: 1;
+  }
+
+  @media (min-width: 922px) {
+    .card-block {
+      flex-direction: row;
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+    }
+
+    :global([ref='cardRef']) {
+      width: 55%;
+      min-width: 55%;
+    }
   }
 </style>

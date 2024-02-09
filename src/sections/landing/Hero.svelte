@@ -9,12 +9,12 @@
   letters.find((letter) => letter == '');
 
   const fromPos = [
-    { scale: 22, x: '-200vw' },
+    { scale: 22, x: '-300vw' },
     { scale: 22, y: '-300vh' },
-    { scale: 22, y: '200vh', x: '-20vw' },
-    { scale: 22, y: '-200vh', x: '-50vw' },
-    { scale: 22, y: '-200vh', x: '100vw' },
-    { scale: 22, y: '200vh', x: '20vw' },
+    { scale: 22, y: '300vh', x: '-20vw' },
+    { scale: 22, y: '-300vh', x: '-50vw' },
+    { scale: 22, y: '-300vh', x: '100vw' },
+    { scale: 22, y: '300vh', x: '20vw' },
   ];
 
   onMount(() => {
@@ -33,9 +33,6 @@
       { opacity: 1, duration: 0.5, ease: 'power1.inOut', y: 0 },
     );
 
-    // return () => {
-
-    // };
   });
 
   onDestroy(() => {
@@ -70,7 +67,7 @@
     min-height: 100vh;
     justify-content: center;
     overflow: hidden;
-    // position: relative;
+    position: relative;
     width: 100%;
   }
 

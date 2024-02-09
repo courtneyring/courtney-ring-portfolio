@@ -31,7 +31,7 @@
   }
 
   .landing__pic {
-    background-image: url('$lib/images/profile-image.jpg');
+    background-image: url('/profile-image.jpg');
     background-size: 120%;
     background-position: 0% 100%;
     border-radius: 600px;

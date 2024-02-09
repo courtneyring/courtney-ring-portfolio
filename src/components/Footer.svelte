@@ -2,12 +2,14 @@
   import liIcon from '$lib/images/linkedin.svg';
   import githubIcon from '$lib/images/github.svg';
   import emailIcon from '$lib/images/paper-plane.svg';
-
+  import logo from '$lib/images/final-filled-edit.svg';
 </script>
 
 <footer>
   <div class="container footer__container">
-    <div class="footer__initial">Courtney Ring</div>
+    <a href="/" class="logo">
+      <img src={logo} />
+    </a>
     <div class="footer__divider" />
     <div class="footer__links">
       <div class="footer__link">
@@ -83,7 +85,7 @@
       filter: invert(100%) sepia(3%) saturate(7488%) hue-rotate(305deg)
         brightness(107%) contrast(103%);
       margin-bottom: 10px;
-      width: 25px;
+      width: 40px;
     }
   }
 
@@ -96,7 +98,17 @@
     background-color: white;
     height: 2px;
     margin-bottom: 50px;
+    width: 200px;
+  }
+
+  .logo {
+    margin-bottom: 30px;
     width: 100px;
+    & > img {
+      height: auto;
+      width: 100%;
+      filter: invert(100%) sepia(63%) saturate(2%) hue-rotate(278deg) brightness(111%) contrast(101%);
+    }
   }
 
   @media (min-width: 768px) {

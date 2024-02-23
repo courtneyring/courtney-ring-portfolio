@@ -13,8 +13,8 @@
 </script>
 
 <svelte:head>
-  <title>Courtney Ring | Creative Technologist</title>
-  <meta name="description" content="Courtney Ring | Creative Technologist" />
+  <title>Courtney Ring | Technology Lead • Creative Technologist • Software Engineer</title>
+  <meta name="description" content="Courtney Ring | Technology Lead • Creative Technologist • Software Engineer" />
 </svelte:head>
 
 <div class="landing">

@@ -80,12 +80,13 @@
     font-size: 18px;
     justify-content: flex-end;
     text-align: center;
+    // width: 40px;
 
     & > img {
       filter: invert(100%) sepia(3%) saturate(7488%) hue-rotate(305deg)
         brightness(107%) contrast(103%);
       margin-bottom: 10px;
-      width: 40px;
+      width: 25px;
     }
   }
 
@@ -98,12 +99,12 @@
     background-color: white;
     height: 2px;
     margin-bottom: 50px;
-    width: 200px;
+    width: 100px;
   }
 
   .logo {
     margin-bottom: 30px;
-    width: 100px;
+    width: 50px;
     & > img {
       height: auto;
       width: 100%;
@@ -122,12 +123,20 @@
     }
 
     .footer__divider {
+      width: 200px;
       margin-bottom: 60px;
     }
 
     .footer__link {
       margin-bottom: 0px;
       width: 200px;
+      & > img {
+        width: 40px;
+      }
+    }
+
+    .logo {
+      width: 100px;
     }
   }
 </style>

@@ -1,10 +1,16 @@
 // import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
+import { build } from 'vite';
 
+const env = process.env.NODE_ENV;
+
+console.log(process.env.NODE_ENV)
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+ 
+  
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
 		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
@@ -18,13 +24,14 @@ const config = {
   }),
   prerender: {
     entries: [
-      '*',
-      '/work/ford-drive',
-      '/work/canon-photobooth',
-      '/work/aptiv-sva',
-      '/work/ford-specpods',
-      '/work/saudi',
-      '/work/canon-passport',
+      '/work/ford-drive/index.html',
+      '/work/canon-photobooth/index.html',
+      '/work/aptiv-sva/index.html',
+      '/work/ford-specpods/index.html',
+      '/work/saudi/index.html',
+      '/work/canon-passport/index.html',
+      '/about/',
+      '/work/index.html'
     ]
   }
 };

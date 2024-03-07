@@ -3,7 +3,8 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build:dev": "NODE_ENV=dev vite build",
+    "build:prod": "NODE_ENV=prod vite build",
 		"preview": "vite preview"
 	},
 	"devDependencies": {

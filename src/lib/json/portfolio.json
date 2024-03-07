@@ -272,5 +272,30 @@
         "backgroundColor": "#191C23"
       }
     ]
+  },
+  {
+    "id": "infiniti-rebrand",
+    "title": "Infiniti Rebrand",
+    "heroImg": "hero-2.png",
+    "heroPos": "center center",
+    "tileImg": "hero-2.png",
+    "body": "<p>In June 2023, Infiniti announced a brand refresh, complete with a new logo, color scheme, showrooms, sounds, and even fragrance. It's digital properties were making the transition from a primarily black & white palette to blue & beige with its signature horizon graphic. Our part in the overhaul was to ensure all Infiniti Shopping Tools pages followed the new brand guideline for both the American and Canadian markets. These pages included its build & price tool, inventory search, and payment estimator. I led a team of 2 developers and 2 QA analysts to complete the project in just under four months.</p>",
+    "skills": "Gatsby.js, styled-components, Jenkins, Jira",
+    "employer": "Critical Mass",
+    "client": "Infiniti",
+    "role": "Tech Lead",
+    "sections": [
+      {
+        "layout": "image",
+        "image": "mockup.png",
+        "backgroundColor": "#667084"
+      },
+      {
+        "layout": "text",
+        "title": "Project Details",
+        "body": "As a crossover between the delivery team and technology team, I helped support project planning  tasks as well as the development and release phases. I provided estimates for frontend tasks to help inform prioritization, scheduling, and resourcing. From there, we agreed on key milestones for each application to ensure we hit our target date and demo progress to the clients. For the development phase, I led a team of two developers and two QA analysts to complete the project in just under four months. The  process also required coordination with the AEM and content management teams as we worked through dependencies. The initial production release was done on June 22, 2023, with rolling releases afterward for subsequent milestones.",
+        "backgroundColor": "#191C23"
+      }
+    ]
   }
 ]

@@ -53,7 +53,7 @@
 
 <div
   class="work__hero"
-  style="background-image: url('/work/{id}/{content.heroImg}'); background-position: {content.heroPos}"
+  style="background-image: url('/work/{id}/{content.heroImg}'); background-position: {content.heroPos}; background-size: cover"
 />
 
 <!-- Intro -->

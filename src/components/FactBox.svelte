@@ -11,7 +11,7 @@
     {/if}
     {#if content.skills}
     <div class='fact-box__fact'>
-        <div class='fact-box__label'>Requirements</div>
+        <div class='fact-box__label'>Skills</div>
         <div class='fact-box__value'>{content.skills}</div>
     </div>
     {/if}

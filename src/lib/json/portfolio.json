@@ -297,5 +297,30 @@
         "backgroundColor": "#191C23"
       }
     ]
+  },
+  {
+    "id": "qx60-competitor-compare",
+    "title": "QX60 Competitor Compare",
+    "heroImg": "hero.png",
+    "heroPos": "center 45%",
+    "tileImg": "hero.png",
+    "body": "<p>After the redesign of the QX60 SUV in 2023, Infiniti wanted to create a site that highlighted all the vehicle's stand-out features and showcased where it excelled against its competitors. In contrast to the rest of the site - mostly made up of static pages - they wanted something interactive and dynamic that customers could use to explore all angles of the QX60.</p><p>The biggest challenge in the project brief was load time expectations. The client was planning on making it the landing page of the QX60, a page that was crucial to user journey. The higher the load time, the higher the bounce rate, ending a user’s journey before it even starts. So having the site load in under a few seconds was a non-negotiable.</p>",
+    "skills": "Gatsby.js, styled-components, Jenkins, Jira, GSAP",
+    "employer": "Critical Mass",
+    "client": "Infiniti",
+    "role": "Tech Lead",
+    "sections": [
+      {
+        "layout": "image",
+        "image": "mockup.png",
+        "backgroundColor": "#667084"
+      },
+      {
+        "layout": "text",
+        "title": "Project Details",
+        "body": "With loading times in mind, we ruled out WebGL - the standard approach to 3D experiences. We had to find a way to give the users a similar experience without the overhead of big files. So instead we turned to video. We collaborated with motion designers to define the movements of the QX60 model for each page transition. Those segments were combined into a single video, which we used as the primary asset on the site. Using GSAP ScrollTrigger and scroll snap, we scrubbed the video based on scroll progress and overlaid hotspot at each stopping point. The outcome was everything a 3D experience could provide without the incorporation of actual 3D components.",
+        "backgroundColor": "#191C23"
+      }
+    ]
   }
 ]

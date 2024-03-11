@@ -1,31 +1,24 @@
 <script>
-  import { onMount, onDestroy } from 'svelte';
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+  import { onMount, onDestroy } from "svelte";
+  import { gsap } from "gsap/dist/gsap";
+  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
   export let title;
   export let dark;
-
   let containerNode;
 
-
-
-
   onMount(() => {
-    console.log(containerNode)
     gsap.from(containerNode, {
       opacity: 0,
-      y: '2vh',
+      y: "2vh",
       duration: 0.5,
       scrollTrigger: {
         trigger: containerNode,
-        start: 'top bottom-=40%',
-        // markers: true
+        start: "top bottom-=40%",
       },
     });
-
   });
 
   onDestroy(() => {
@@ -36,7 +29,7 @@ gsap.registerPlugin(ScrollTrigger);
   });
 </script>
 
-<div class="header__container {dark ? 'dark' : ''}" bind:this={containerNode}>
+<div class="header__container {dark && 'dark'}" bind:this={containerNode}>
   <h3 class="header__title">{title}</h3>
   <div class="header__divider"></div>
 </div>

@@ -4,7 +4,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build:dev": "NODE_ENV=dev vite build",
-    "build:prod": "NODE_ENV=prod vite build",
+		"build:prod": "NODE_ENV=prod vite build",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
@@ -13,6 +13,7 @@
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.20.4",
+		"@types/gsap": "^3.0.0",
 		"sass": "^1.66.1",
 		"svelte": "^4.0.5",
 		"svelte-preprocess": "^5.0.4",

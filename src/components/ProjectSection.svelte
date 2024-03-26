@@ -17,7 +17,6 @@
       scrollTrigger: {
         trigger: node,
         start: "top bottom-=40%",
-        markers: true
       },
     });
   })

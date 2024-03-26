@@ -1,6 +1,33 @@
 <script>
+  import { gsap } from "gsap/dist/gsap";
+  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+    import { onMount, onDestroy } from 'svelte';
+
+  gsap.registerPlugin(ScrollTrigger);
+
   export let section;
   export let content;
+  let node;
+
+  onMount(() => {
+    gsap.from(node, {
+      opacity: 0,
+      y: "2vh",
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: node,
+        start: "top bottom-=40%",
+        markers: true
+      },
+    });
+  })
+
+  onDestroy(() => {
+    let triggers = ScrollTrigger.getAll();
+    triggers.forEach((trigger) => {
+      trigger.kill();
+    });
+  });
 
 </script>
 <div class='section__container'>
@@ -29,7 +56,7 @@
 </div>
 
 {:else if section.layout == 'text'}
-<div class='section__text container'>
+<div class='section__text container' bind:this={node}>
     <div class='section__subheader ' style='color: {section.textColor}'>{section.title}</div>
     <div class='section__text '  style='color: {section.textColor}'>{@html section.body}</div>
 </div>
@@ -55,15 +82,16 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    width: 100%;
+    // width: 100%;
+    height: 80vh;
 
     & img {
-        width: 100%;
+        height: 100%;
     }
 
     & video {
-        max-width: 100%;
-        height: auto;
+        width: auto;
+        height: 100%;
     }
 }
 

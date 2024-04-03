@@ -1,8 +1,4 @@
 <script>
-  export let data;
-  $: id = data.projectId;
-
-
   import { goto } from '$app/navigation';
   import {
     Header,
@@ -11,6 +7,33 @@
   } from '../../../components/index.js';
   import copy from '$lib/json/portfolio.json';
   import arrowRight from '$lib/images/arrow-right.svg';
+  import { gsap } from "gsap/dist/gsap";
+  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+    import { onMount, onDestroy } from 'svelte';
+  gsap.registerPlugin(ScrollTrigger);
+
+  export let data;
+  $: id = data.projectId;
+  let bodyNode;
+
+  onMount(() => {
+    gsap.from(bodyNode, {
+      opacity: 0,
+      y: "2vh",
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: bodyNode,
+        start: "top bottom-=40%",
+      },
+    });
+  })
+
+  onDestroy(() => {
+    let triggers = ScrollTrigger.getAll();
+    triggers.forEach((trigger) => {
+      trigger.kill();
+    });
+  });
 
   
   $: currentIdx = copy.findIndex((project) => project.id == id);
@@ -63,7 +86,7 @@
 
     <div class="work__content">
       <div class="work__block">
-        <div class="work__body">{@html content.body}</div>
+        <div class="work__body" bind:this={bodyNode}>{@html content.body}</div>
       </div>
       <div class="work__block">
         <FactBox {content} />

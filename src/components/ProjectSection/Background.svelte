@@ -1,3 +1,7 @@
+<script>
+
+</script>
+
 <div class="section__background container"></div>
 
 <style lang="scss">

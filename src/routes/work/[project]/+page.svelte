@@ -47,19 +47,6 @@
     goto(`/work/${nextProject.id}`)
   }
 
-  const getSectionStyle = (section) => {
-    let style = '';
-    if (section.backgroundColor) {
-      style += `background-color: ${section.backgroundColor};`;
-    }
-    if (section.backgroundImage) {
-            style += `background-image: url('/work/${id}/${section.backgroundImage}');`
-        }
-    if (section.backgroundPos) {
-      style += `background-position: ${section.backgroundPos};`;
-    }
-    return style;
-  };
 </script>
 
 <svelte:head>
@@ -96,7 +83,7 @@
 </div>
 
 {#each content.sections as section}
-  <div class='section' style={getSectionStyle(section)}>
+  <div class='section'>
     <ProjectSection {section} {content} />
   </div>
 {/each}

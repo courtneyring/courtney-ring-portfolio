@@ -7,7 +7,7 @@
     "featured": true,
     "body": "<p>When autoshows returned after Covid during the summer of 2021, Ford wanted to make a big impression for its flashiest cars - the Bronco and the Mach-E.</p><p>TThe Bronco draws customers in because of its off-roading capabilities and Ford wanted to demonstrate just that. Imagination designed and built an obstacle course ending with “The Mountain” to showcase the Bronco’s peak incline and decline angles.</p><p>The Mach-E is Ford’s electric sports car with an impressive ability to accelerate from 0-60 in 3.5 seconds. With this same desire to show off peak performance, Ford had a runway for drivers to put the pedal to the metal and allow participants to feel the speed for themselves.</p><p>In both cases, Ford wanted customers to have a digital souvenir to go home with to remember these experiences. So as part of the activation, we built an application that records visitors’ reaction at the exact moment of surprise and delight and programmatically edit the video for a keepsake they could view and share afterwards.</p>",
     "heroImg": "hero.png",
-    "heroPos": "center 35%",
+    "heroPos": "50% 35%",
     "tileImg": "tile.png",
     "employer": "Imagination",
     "client": "Ford",
@@ -29,7 +29,8 @@
       {
         "layout": "background-image",
         "backgroundImage": "background-1.png",
-        "backgroundPos": "center 40%"
+        "backgroundPosX":  50,
+        "backgroundPosY": 40
       },
       {
         "layout": "text",
@@ -53,7 +54,7 @@
     "featured": true,
     "body": "<p>For CES 2020, Canon had plans to create a flashy centralized fashion show lined with cameras as a fun way to demo their offerings. However, they wanted to make the experience more personalized, so we added a digital component to the activation that would allow the participants to save their images to their Canon Passport profile. With this functionality, users were able to revisit the photos after the show, and this also allowed Canon to collect leads from those who visited the stand.</p><p>In addition to increasing participant engagement and lead generation, this application also showcased the abilities of Canon's Software Development Kit. In our particular case, we used it to send data between the cameras and nearby tablets, as well as control the cameras from the tablets themselves.</p>",
     "heroImg": "hero.png",
-    "heroPos": "59% center",
+    "heroPos": "59% 50%",
     "tileImg": "tile.png",
     "skills": "Angular, Scss, C++, Nodejs",
     "employer": "Imagination",
@@ -151,7 +152,8 @@
       {
         "layout": "background-image",
         "backgroundImage": "mockup-1.png",
-        "backgroundPos": "100% 20%"
+        "backgroundPosX": 100,
+        "backgroundPosY": 20
       },
       {
         "layout": "text",
@@ -189,7 +191,8 @@
       {
         "layout": "background-image",
         "backgroundImage": "content-background.png",
-        "backgroundPos": "center center"
+        "backgroundPosX": 50,
+        "backgroundPosY": 50
       },
       {
         "layout": "video",
@@ -202,7 +205,7 @@
     "id": "canon-passport",
     "title": "Canon Passport Experience",
     "heroImg": "hero.png",
-    "heroPos": "center 40%",
+    "heroPos": "50% 40%",
     "tileImg": "tile.png",
     "body": "<p>Canon’s Passport experience was an application used at live shows and events that allowed participants to track their journey and save information as they visited different touchpoints on the stand. Users were taken through a quick registration process then sent a QR code, which they scanned to save visits to their profile, which could later be accessed through their own personalized ‘souvenir site’. Additionally, to help guide participants through the digital experience, emails were sent out once they registered, notified them of specific souvenirs they may have collected, and introduced them to their souvenir site once the show ended.</p><p>The application was used for most Canon events from 2019-2020 , most notably the Consumer Electronics Show (2019 and 2020), the Albuquerque Balloon Fiesta (2019), and the National Association of Broadcasters Show (2019).</p>",
     "skills": "Angular, Scss",
@@ -227,7 +230,7 @@
     "id": "nissan-hd-mapping",
     "title": "Nissan High Definition Road Map",
     "heroImg": "hero.png",
-    "heroPos": "center 40%",
+    "heroPos": "50% 40%",
     "tileImg": "tile.jpg",
     "body": "<p>With the debut of Nissan's latest iteration of driver-assist technology,  ProPilot Assist 2.0, the first question in everyone's minds was where it could be used. With a need to present this information in an engaging, interactive way, the solution was obvious: a map. And not just a regular map - the very map that is used in the ProPilot Assist system with accuracy down to the centimeter.<p></p>Partnering with HD Map provider, Dynamic Map Platform (formerly Ushr), we created this map, displaying the data in a fully interactive way. It allows users to zoom in or out points of interest, pan across the country, as well as search specific location with autocomplete powered by Google.</p>",
     "skills": "OpenLayers, OpenStreetMap, Jinja, Jenkins, Jira, Gulp",
@@ -252,7 +255,7 @@
     "id": "nissan-ariya-launch-campaign",
     "title": "Nissan ARIYA Launch Campaign",
     "heroImg": "2023-nissan-ariya.webp",
-    "heroPos": "center 40%",
+    "heroPos": "50% 40%",
     "tileImg": "desktop-mockup.jpg",
     "body": "<p>With the long-awaited Nissan ARIYA, rolled out in 2023, Nissan was looking to raise excitement around its new all-electric SUV. For customers coming from their media and social campaigns, they needed a landing page to encourage customers to keep exploring the details of the new vehicle. Drawing from the already existing duality theme of the Ariya, we created a page to demonstrate all that the Ariya could achieve. From \"fiercely refined\" to \"elegantly exhilarating\", the site displayed split videos, key metrics, and plenty of images to draw the users into the experience. </p>",
     "skills": "Gatsby.js, styled-components, Jenkins, Jira",
@@ -277,7 +280,7 @@
     "id": "infiniti-rebrand",
     "title": "Infiniti Rebrand",
     "heroImg": "hero-2.png",
-    "heroPos": "center center",
+    "heroPos": "50% 50%",
     "tileImg": "hero-2.png",
     "body": "<p>In June 2023, Infiniti announced a brand refresh, complete with a new logo, color scheme, showrooms, sounds, and even fragrance. It's digital properties were making the transition from a primarily black & white palette to blue & beige with its signature horizon graphic. Our part in the overhaul was to ensure all Infiniti Shopping Tools pages followed the new brand guideline for both the American and Canadian markets. These pages included its build & price tool, inventory search, and payment estimator. I led a team of 2 developers and 2 QA analysts to complete the project in just under four months.</p>",
     "skills": "Gatsby.js, styled-components, Jenkins, Jira",
@@ -302,7 +305,7 @@
     "id": "qx60-competitor-compare",
     "title": "QX60 Competitor Compare",
     "heroImg": "hero.png",
-    "heroPos": "center 45%",
+    "heroPos": "50% 45%",
     "tileImg": "hero.png",
     "body": "<p>After the redesign of the QX60 SUV in 2023, Infiniti wanted to create a site that highlighted all the vehicle's stand-out features and showcased where it excelled against its competitors. In contrast to the rest of the site - mostly made up of static pages - they wanted something interactive and dynamic that customers could use to explore all angles of the QX60.</p><p>The biggest challenge in the project brief was load time expectations. The client was planning on making it the landing page of the QX60, a page that was crucial to user journey. The higher the load time, the higher the bounce rate, ending a user’s journey before it even starts. So having the site load in under a few seconds was a non-negotiable.</p>",
     "skills": "Gatsby.js, styled-components, Jenkins, Jira, GSAP",

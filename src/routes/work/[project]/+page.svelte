@@ -7,46 +7,18 @@
   } from '../../../components/index.js';
   import copy from '$lib/json/portfolio.json';
   import arrowRight from '$lib/images/arrow-right.svg';
-  import { gsap } from "gsap/dist/gsap";
-  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-    import { onMount, onDestroy } from 'svelte';
-  gsap.registerPlugin(ScrollTrigger);
+  import FadeIn from '../../../components/animations/FadeIn.svelte';
 
   export let data;
   $: id = data.projectId;
-  let bodyNode;
-
-  onMount(() => {
-    gsap.from(bodyNode, {
-      opacity: 0,
-      y: "2vh",
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: bodyNode,
-        start: "top bottom-=40%",
-      },
-    });
-  })
-
-  onDestroy(() => {
-    let triggers = ScrollTrigger.getAll();
-    triggers.forEach((trigger) => {
-      trigger.kill();
-    });
-  });
-
-  
   $: currentIdx = copy.findIndex((project) => project.id == id);
   $: content = copy[currentIdx];
   $: nextIdx = currentIdx == copy.length - 1 ? 0 : currentIdx + 1;
   $: nextProject = copy[nextIdx];
 
-
-
   const routeToNext = () => {
-    goto(`/work/${nextProject.id}`)
-  }
-
+    goto(`/work/${nextProject.id}`);
+  };
 </script>
 
 <svelte:head>
@@ -73,7 +45,9 @@
 
     <div class="work__content">
       <div class="work__block">
-        <div class="work__body" bind:this={bodyNode}>{@html content.body}</div>
+        <FadeIn>
+          <div class="work__body">{@html content.body}</div>
+        </FadeIn>
       </div>
       <div class="work__block">
         <FactBox {content} />
@@ -83,20 +57,19 @@
 </div>
 
 {#each content.sections as section}
-  <div class='section'>
+  <div class="section">
     <ProjectSection {section} {content} />
   </div>
 {/each}
 
-<div class='work__next' on:click={routeToNext}>
-    <div class='container work__next-container'>
-        <div>
-            <div class='work__eyebrow'>Next Project</div>
-            <div class='work__value'>{nextProject.title}</div>
-        </div>
-        <img src={arrowRight} class='work__next-arrow' />
-    </div> 
-
+<div class="work__next" on:click={routeToNext}>
+  <div class="container work__next-container">
+    <div>
+      <div class="work__eyebrow">Next Project</div>
+      <div class="work__value">{nextProject.title}</div>
+    </div>
+    <img src={arrowRight} class="work__next-arrow" />
+  </div>
 </div>
 
 <style lang="scss">

@@ -1,37 +1,17 @@
 <script>
-  import { gsap } from 'gsap/dist/gsap';
-  import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-  import { onMount, onDestroy } from 'svelte';
-  gsap.registerPlugin(ScrollTrigger);
+  import FadeIn from '../animations/FadeIn.svelte';
 
   export let contentId;
   export let sectionImage;
-  let node;
 
-  onMount(() => {
-    gsap.from(node, {
-      opacity: 0,
-      y: "2vh",
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: node,
-        start: "top bottom-=40%",
-      },
-    });
-  })
-
-  onDestroy(() => {
-    let triggers = ScrollTrigger.getAll();
-    triggers.forEach((trigger) => {
-      trigger.kill();
-    });
-  });
 
 </script>
 
-<div class="section__media container" bind:this={node}>
-  <img src="/work/{contentId}/{sectionImage}" />
-</div>
+<FadeIn>
+  <div class="section__media container">
+    <img src="/work/{contentId}/{sectionImage}" />
+  </div>
+</FadeIn>
 
 <style lang="scss">
   .section__media {

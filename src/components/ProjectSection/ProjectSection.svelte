@@ -36,7 +36,6 @@
       scrollTrigger: {
         trigger: containerNode,
         start: 'top bottom-=40%',
-        markers: true,
         scrub: true
       },
     });

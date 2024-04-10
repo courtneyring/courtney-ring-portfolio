@@ -1,38 +1,16 @@
 <script>
-  import { onMount, onDestroy } from "svelte";
-  import { gsap } from "gsap/dist/gsap";
-  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-  gsap.registerPlugin(ScrollTrigger);
-
+  import FadeIn from './animations/FadeIn.svelte';
   export let title;
   export let dark;
-  let containerNode;
 
-  onMount(() => {
-    gsap.from(containerNode, {
-      opacity: 0,
-      y: "2vh",
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: containerNode,
-        start: "top bottom-=40%",
-      },
-    });
-  });
-
-  onDestroy(() => {
-    let triggers = ScrollTrigger.getAll();
-    triggers.forEach((trigger) => {
-      trigger.kill();
-    });
-  });
 </script>
 
-<div class="header__container {dark && 'dark'}" bind:this={containerNode}>
-  <h3 class="header__title">{title}</h3>
-  <div class="header__divider"></div>
-</div>
+<FadeIn>
+  <div class="header__container {dark && 'dark'}">
+    <h3 class="header__title">{title}</h3>
+    <div class="header__divider"></div>
+  </div>
+</FadeIn>
 
 <style lang="scss">
   .header__container {

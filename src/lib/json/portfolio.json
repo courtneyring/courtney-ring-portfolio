@@ -1,51 +1,99 @@
 [
+    {
+      "id": "ford-drive",
+      "title": "Ford Built Wild & Built to Electrify",
+      "shortTitle": "Built Wild",
+      "subtitle": "lorem ipsum",
+      "featured": true,
+      "body": "<p>When autoshows returned after Covid during the summer of 2021, Ford wanted to make a big impression for its flashiest cars - the Bronco and the Mach-E.</p><p>TThe Bronco draws customers in because of its off-roading capabilities and Ford wanted to demonstrate just that. Imagination designed and built an obstacle course ending with “The Mountain” to showcase the Bronco’s peak incline and decline angles.</p><p>The Mach-E is Ford’s electric sports car with an impressive ability to accelerate from 0-60 in 3.5 seconds. With this same desire to show off peak performance, Ford had a runway for drivers to put the pedal to the metal and allow participants to feel the speed for themselves.</p><p>In both cases, Ford wanted customers to have a digital souvenir to go home with to remember these experiences. So as part of the activation, we built an application that records visitors’ reaction at the exact moment of surprise and delight and programmatically edit the video for a keepsake they could view and share afterwards.</p>",
+      "heroImg": "hero.png",
+      "heroPos": "50% 35%",
+      "tileImg": "tile.png",
+      "employer": "Imagination",
+      "client": "Ford",
+      "role": "Fullstack Developer, Onsite Support",
+      "skills": "Python, Angular, Scss, Node.js, Next.js, RabbitMQ, MySql",
+      "sections": [
+        {
+          "layout": "video",
+          "video": "mache.mp4",
+          "backgroundColor": "#191c23"
+        },
+        {
+          "layout": "text",
+          "title": "Technical Details",
+          "body": "<p>The goal of the project was get clips of video on  peak incline/decline for the Bronco and peak acceleration for the Mach-E.</p><p>In order to do this, we had an accelerometer and gyroscope in the trunk of each vehicle. We used a python script on a raspberry pi to read and process these numbers continuously. We used the accelerometer readings directly for the Mach-E, but the Bronco needed data on the incline angle of the car, so we used the data from both sensors and the complimentary filter to combine them into an incline angle.</p><p>All of this data was then sent to the video recording application running on a laptop, also in stored in the trunk of the car. The application was connected to a webcam attached to the dashboard that recorded the participants in the back seat. As the vehicle hit incline, decline, and acceleration thresholds, the video application recorded timestamps. Once the ride ended, the video and timestamps were then passed off to the video processing application.</p><p>The backend which received these requests and did the video processing was run on a physical server kept in back of house.  The video processing application itself was run in a docker container on a virtual machine on that server. The application used a node backend to queue jobs using rabbitmq as they came in from the frontend and a node worker to process each job. Ffmpeg was used to splice the video at the given timestamps, add clips of stock video, audio, and a layover. It then sent the final product to Amazon S3 for storage and an email to the user for them to view and share.</p>",
+          "backgroundColor": "#EBECED",
+          "textColor": "#667084"
+        },
+        {
+          "layout": "background-image",
+          "backgroundImage": "background-1.png",
+          "backgroundPosX": 50,
+          "backgroundPosY": 40
+        },
+        {
+          "layout": "text",
+          "title": "Outcome",
+          "body": "<p>The \"Built Wild\" and \"Build to Electrify\" activations debuted at the Chicago Autoshow 2021 with massive success. Ford continued with the program for the 2021 autoshow season. During my time supporting this activation between July 2021 and March 2022, it was brought to 8 different auto shows and 28,552 total videos were sent to customers. The activation is still brought to auto shows across the country today.</p>",
+          "backgroundColor": "#191c23",
+          "textColor": "#ffffff"
+        },
+        {
+          "layout": "video",
+          "video": "bronco.mp4",
+          "backgroundColor": "#ebeced"
+        }
+      ]
+    },
   {
-    "id": "ford-drive",
-    "title": "Ford Built Wild & Built to Electrify",
-    "shortTitle": "Built Wild",
+    "id": "dwb",
+    "title": "Driving While Black",
+    "shortTitle": "Driving While Black",
+    "client": "Courageous Conversation Global Foundation",
     "subtitle": "lorem ipsum",
     "featured": true,
-    "body": "<p>When autoshows returned after Covid during the summer of 2021, Ford wanted to make a big impression for its flashiest cars - the Bronco and the Mach-E.</p><p>TThe Bronco draws customers in because of its off-roading capabilities and Ford wanted to demonstrate just that. Imagination designed and built an obstacle course ending with “The Mountain” to showcase the Bronco’s peak incline and decline angles.</p><p>The Mach-E is Ford’s electric sports car with an impressive ability to accelerate from 0-60 in 3.5 seconds. With this same desire to show off peak performance, Ford had a runway for drivers to put the pedal to the metal and allow participants to feel the speed for themselves.</p><p>In both cases, Ford wanted customers to have a digital souvenir to go home with to remember these experiences. So as part of the activation, we built an application that records visitors’ reaction at the exact moment of surprise and delight and programmatically edit the video for a keepsake they could view and share afterwards.</p>",
-    "heroImg": "hero.png",
+    "body": "<p>The simple act of “Driving While Black” in America can quickly turn into an experience fraught with tension, fear, and the looming threat of violence. Studies consistently reveal that black motorists are more likely to experience aggressive tactics, excessive use of force, and even lethal violence compared to their white counterparts. To bring awareness to this issue, Critical Mass partnered with Goodby, Silverstein & Partners to create an experience that allows users to step into the shoes of Black drivers. Debuted at the Detroit Auto Show 2023, CM and GSP unveiled a concept car to highlight the double standards Black people experience. The goal was to spark conversation and promote change across the country.</p>",
+    "heroImg": "hero2.webp",
     "heroPos": "50% 35%",
     "tileImg": "tile.png",
-    "employer": "Imagination",
-    "client": "Ford",
-    "role": "Fullstack Developer, Onsite Support",
-    "skills": "Python, Angular, Scss, Node.js, Next.js, RabbitMQ, MySql",
+    "employer": "Critical Mass",
+    "role": "Tech Lead",
+    "skills": "three.js, 8th Wall",
     "sections": [
       {
         "layout": "video",
-        "video": "mache.mp4",
-        "backgroundColor": "#191c23"
+        "videoEmbed": "<iframe width='100%' height='100%' src='https://www.youtube.com/embed/bOhjdpQ9cEA?si=hY2fLlj-BZCi6V4i' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+        "backgroundColor": "#667084"
       },
       {
         "layout": "text",
-        "title": "Technical Details",
-        "body": "<p>The goal of the project was get clips of video on  peak incline/decline for the Bronco and peak acceleration for the Mach-E.</p><p>In order to do this, we had an accelerometer and gyroscope in the trunk of each vehicle. We used a python script on a raspberry pi to read and process these numbers continuously. We used the accelerometer readings directly for the Mach-E, but the Bronco needed data on the incline angle of the car, so we used the data from both sensors and the complimentary filter to combine them into an incline angle.</p><p>All of this data was then sent to the video recording application running on a laptop, also in stored in the trunk of the car. The application was connected to a webcam attached to the dashboard that recorded the participants in the back seat. As the vehicle hit incline, decline, and acceleration thresholds, the video application recorded timestamps. Once the ride ended, the video and timestamps were then passed off to the video processing application.</p><p>The backend which received these requests and did the video processing was run on a physical server kept in back of house.  The video processing application itself was run in a docker container on a virtual machine on that server. The application used a node backend to queue jobs using rabbitmq as they came in from the frontend and a node worker to process each job. Ffmpeg was used to splice the video at the given timestamps, add clips of stock video, audio, and a layover. It then sent the final product to Amazon S3 for storage and an email to the user for them to view and share.</p>",
-        "backgroundColor": "#EBECED",
-        "textColor": "#667084"
+        "title": "",
+        "body": "<p>The centerpiece of the experience was an augmented reality activation that allowed users to explore the prototyped vehicle in a 3D space. At the Detroit Auto Show, this created the illusion that this vehicle was on display along with all the other cars physically at the show. Paired with the experience is a video that is presented as a hype reel, narrating through all the vehicle’s stand-out features. But the underlying message is that these “safety features” such as transparent doors to “eliminate reasonable suspicion” and a steering wheel that “keeps hands visible at all times” are the lengths that Black drivers need to go to in order to feel safe driving in America today.</p>",
+        "backgroundColor": "#20232c",
+        "textColor": "#ebeced"
       },
       {
         "layout": "background-image",
-        "backgroundImage": "background-1.png",
+        "backgroundImage": "background-img.webp",
         "backgroundPosX":  50,
         "backgroundPosY": 40
       },
       {
         "layout": "text",
-        "title": "Outcome",
-        "body": "<p>The \"Built Wild\" and \"Build to Electrify\" activations debuted at the Chicago Autoshow 2021 with massive success. Ford continued with the program for the 2021 autoshow season. During my time supporting this activation between July 2021 and March 2022, it was brought to 8 different auto shows and 28,552 total videos were sent to customers. The activation is still brought to auto shows across the country today.</p>",
-        "backgroundColor": "#191c23",
+        "title": "",
+        "body": "<p>The campaign won a series of awards including two Anthem Awards in DE&I/Awareness, two Andy Awards in Craft and Idea, three Webby Awards, and four Clios including the Grand in Experience/Activation/Guerilla.</p>",
+        "backgroundColor": "#49629b",
         "textColor": "#ffffff"
       },
       {
-        "layout": "video",
-        "video": "bronco.mp4",
-        "backgroundColor": "#ebeced"
+        "layout": "image",
+        "image": "award.jpeg",
+        "backgroundColor": "#191c23"
       }
     ]
   },
+
   {
     "id": "canon-photobooth",
     "title": "Canon Photo Booth Experience",

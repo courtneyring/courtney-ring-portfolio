@@ -46,9 +46,13 @@
     .title-block {
       align-items: flex-start;
       margin-bottom: 0px;
+      padding-top: 4%;
+      padding-right: 10px;
 
       &.right-aligned {
         align-items: flex-end;
+        padding-right: 0;
+        padding-left: 10px;
 
         & h4 {
           text-align: right;

@@ -33,6 +33,8 @@
     }
   }
   .section__embed {
+    aspect-ratio: 16/9;
+    height: auto;
     width: 80%;
   }
 </style>

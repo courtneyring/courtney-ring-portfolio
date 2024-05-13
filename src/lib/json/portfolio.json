@@ -56,7 +56,7 @@
     "body": "<p>The simple act of “Driving While Black” in America can quickly turn into an experience fraught with tension, fear, and the looming threat of violence. Studies consistently reveal that black motorists are more likely to experience aggressive tactics, excessive use of force, and even lethal violence compared to their white counterparts. To bring awareness to this issue, Critical Mass partnered with Goodby, Silverstein & Partners to create an experience that allows users to step into the shoes of Black drivers. Debuted at the Detroit Auto Show 2023, CM and GSP unveiled a concept car to highlight the double standards Black people experience. The goal was to spark conversation and promote change across the country.</p>",
     "heroImg": "hero2.webp",
     "heroPos": "50% 35%",
-    "tileImg": "tile.png",
+    "tileImg": "hero2.webp",
     "employer": "Critical Mass",
     "role": "Tech Lead",
     "skills": "three.js, 8th Wall",

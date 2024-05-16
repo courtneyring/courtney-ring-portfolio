@@ -93,7 +93,6 @@
       }
     ]
   },
-
   {
     "id": "canon-photobooth",
     "title": "Canon Photo Booth Experience",
@@ -212,6 +211,34 @@
       }
     ]
   },
+      {
+        "id": "nissan-chatbot",
+        "title": "Nissan EV Center",
+        "shortTitle": "Nissan EV Center",
+        "subtitle": "lorem ipsum",
+        "body": "<p>In the past few years, automotive companies have seen a huge surge in electric vehicle sales globally. Consumers are increasingly encouraged to buy electric and there has been greater focus on environmental concerns, tech advancements, and government incentives & regulations. Nissan did not hesitate to respond to this trend. To add to their electric vehicle lineup, they announced their latest model, the ARIYA, in 2022. </p><p>However, with the release of this latest electric vehicle, it became clear that younger buyers were still hesitant when it came to their electric vehicle offerings. Nissan wanted to help address these concerns by connecting with this generation on their own terms. Critical Mass built an AI-driven, NLP-based chatbot to deliver seamless and engaging conversation to answer the questions around the ARIYA and EVs in general. The experience was meant to take a “people-centric” approach, allowing research to feel more personalized. </p>",
+        "heroImg": "hero.webp",
+        "heroPos": "75% center",
+        "tileImg": "tile2.png",
+        "employer": "Critical Mass",
+        "client": "Nissan",
+        "role": "Creative Technologist, Tech Lead",
+        "skills": "",
+        "sections": [
+          {
+            "layout": "image",
+            "image": "image-1.png",
+            "backgroundColor": "#191C23"
+          },
+          {
+            "layout": "text",
+            "title": "Technical Details",
+            "body": "<p>We partnered with Kore.ai to create a chatbot with knowledge centered around the Nissan ARIYA, Nissan EV Technologies, and electric vehicles in general. A majority of the work revolved around training and maintaining the model. We started by defining simple questions and answers, which the platform used as part of its knowledge base. To further define conversation flow, we then built dialog tasks to link specific user intents with bot responses. This gave us the ability to work on conversational elements and build business logic into the flow. Lastly, we developed visual responses so users could see interactive elements and data visualizations rather than simple text-based answers. Once the bot was deployed, we continued to refine the model and optimize the NLP to improve understanding and interaction with the user. </p>",
+            "backgroundColor": "#EBECED",
+            "textColor": "#667084"
+          }
+        ]
+      },
   {
     "id": "saudi",
     "title": "Open Saudi, Open Hearts, Open Doors",

@@ -21,7 +21,6 @@
     display: flex;
     justify-content: center;
     // width: 100%;
-    height: 80vh;
 
     & img {
       height: 100%;
@@ -36,5 +35,11 @@
     aspect-ratio: 16/9;
     height: auto;
     width: 80%;
+  }
+
+  @media (min-width: 768px) {
+    .section__media {
+      height: 80vh;
+    }
   }
 </style>

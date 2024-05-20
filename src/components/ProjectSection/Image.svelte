@@ -1,10 +1,8 @@
 <script>
-  import FadeIn from '../animations/FadeIn.svelte';
+  import FadeIn from "../animations/FadeIn.svelte";
 
   export let contentId;
   export let sectionImage;
-
-
 </script>
 
 <FadeIn>
@@ -18,15 +16,27 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 80vh;
+    
 
     & img {
-      height: 100%;
+      height: auto;
+      max-width: 100%;
     }
 
     & video {
       width: auto;
       height: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .section__media {
+      height: 80vh;
+      
+      & > img {
+        height: 100%;
+        width: auto;
+      }
     }
   }
 </style>

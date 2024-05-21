@@ -25,8 +25,8 @@
 </script>
 
 <header class={direction == 'down' && 'hide'}>
-  <a href="/" class="logo">
-    <img src={logo} />
+  <a href="/" class="logo" aria-label='Return to Home'>
+    <img src={logo} alt='CR Logo'/>
   </a>
 
   <nav>

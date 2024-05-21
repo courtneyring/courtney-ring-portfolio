@@ -7,8 +7,8 @@
 
 <footer>
   <div class="container footer__container">
-    <a href="/" class="logo">
-      <img src={logo} />
+    <a href="/" class="logo" aria-label="Return to Home">
+      <img src={logo} alt='CR Logo' />
     </a>
     <div class="footer__divider" />
     <div class="footer__links">
@@ -18,7 +18,7 @@
           target="_blank"
           class="footer__link"
         >
-          <img src={liIcon} />
+          <img src={liIcon} alt='LinkedIn Icon' />
           LinkedIn
         </a>
       </div>
@@ -28,13 +28,13 @@
           target="_blank"
           class="footer__link"
         >
-          <img src={githubIcon} />
+          <img src={githubIcon} alt='Github Icon'/>
           Github
         </a>
       </div>
       <div class="footer__link">
         <a href="mailto:courtneyring3@gmail.com" class="footer__link">
-          <img src={emailIcon} />
+          <img src={emailIcon} alt='Email Icon'/>
           Email
         </a>
       </div>
@@ -58,11 +58,6 @@
     min-height: 300px;
     padding-top: 30px;
     padding-bottom: 70px;
-  }
-  .footer__initial {
-    color: white;
-    font-size: 35px;
-    margin-bottom: 20px;
   }
 
   .footer__links {

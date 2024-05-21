@@ -40,12 +40,6 @@
     width: 300px;
   }
 
-  @media (min-width: 480px) {
-    .landing__text > h1 {
-      font-size: 60px;
-    }
-  }
-
   @media (min-width: 768px) {
     .landing__body {
       font-size: 20px;

@@ -13,7 +13,7 @@
   
 </script>
 
-<a class='card' href='/work/{project.id}' bind:this={node} {ref} style='height: {height}px'>
+<a class='card' href='/work/{project.id}' bind:this={node} {ref} style='height: {height}px' aria-label={`Link to ${project.id}`}>
   <div class='card__image' style='background-image: url(/work/{project.id}/{project.heroImg}); '></div>
 </a>
 

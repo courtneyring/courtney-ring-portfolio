@@ -7,7 +7,7 @@
 
 <FadeIn>
   <div class="section__media container">
-    <img src="/work/{contentId}/{sectionImage}" />
+    <img src="/work/{contentId}/{sectionImage}" alt={`mockup-${contentId}`}/>
   </div>
 </FadeIn>
 

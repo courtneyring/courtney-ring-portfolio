@@ -23,13 +23,8 @@
 
 <svelte:head>
   <title>Courtney Ring | Work | {content.title}</title>
-  <meta name="description" content="Svelte demo app" />
+  <meta name="Courtney Ring Portfolio" content="Courtney Ring Portfolio" />
 </svelte:head>
-
-<!-- <a class='work__back' href='/'>
-    <img src={arrowRight} />
-    Home
-</a> -->
 
 <!-- Hero -->
 
@@ -41,7 +36,7 @@
 <!-- Intro -->
 <div class="section work__intro">
   <div class="container">
-    <Header title={content.title} />
+    <Header title={content.title} tag='h1'/>
 
     <div class="work__content">
       <div class="work__block">
@@ -62,25 +57,23 @@
   </div>
 {/each}
 
-<div class="work__next" on:click={routeToNext}>
-  <div class="container work__next-container">
-    <div>
-      <div class="work__eyebrow">Next Project</div>
-      <div class="work__value">{nextProject.title}</div>
+<!-- <a class="work__next" on:click={routeToNext}> -->
+<div class="work__next">
+  <a class="work__next-link" href={`/work/${nextProject.id}`}>
+    <div class="container work__next-container">
+      <div>
+        <div class="work__eyebrow">Next Project</div>
+        <div class="work__value">{nextProject.title}</div>
+      </div>
+      <img src={arrowRight} class="work__next-arrow" alt="right arrow" />
     </div>
-    <img src={arrowRight} class="work__next-arrow" />
-  </div>
+  </a>
 </div>
 
 <style lang="scss">
   @mixin landing-heights($hero-height) {
     .work__hero {
       height: #{$hero-height}vh;
-    }
-
-    Header {
-      height: #{100 - $hero-height}vh;
-      margin-bottom: 0px;
     }
   }
 
@@ -122,22 +115,28 @@
   .work__next {
     background-color: #49629b;
     color: white;
-    padding: 30px 0px;
+
     cursor: pointer;
 
     &:hover {
       background-color: $color-purple-light;
     }
 
-    & .work__eyebrow {
-      font-size: 12px;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-    }
+    .work__next-link {
+      width: 100%;
+      height: 100%;
+      padding: 30px 0px;
+      
+      & .work__eyebrow {
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
 
-    & .work__value {
-      font-size: 22px;
+      & .work__value {
+        font-size: 22px;
+      }
     }
   }
 
@@ -149,21 +148,6 @@
 
   .work__next-arrow {
     width: 70px;
-  }
-
-  .work__back {
-    color: white;
-    cursor: pointer;
-    font-size: 22px;
-    left: 20px;
-    position: fixed;
-    top: 20px;
-    z-index: 5;
-
-    & > img {
-      margin-right: 10px;
-      transform: rotate(180deg);
-    }
   }
 
   @media (min-width: 768px) {
@@ -189,7 +173,7 @@
       margin-bottom: 0px;
     }
 
-    .work__next {
+    .work__next > .work__next-link {
       padding: 50px 0px;
 
       & .work__eyebrow {

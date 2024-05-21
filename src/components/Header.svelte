@@ -2,12 +2,17 @@
   import FadeIn from './animations/FadeIn.svelte';
   export let title;
   export let dark;
+  export let tag;
 
 </script>
 
 <FadeIn>
   <div class="header__container {dark && 'dark'}">
+    {#if tag=='h1'}
+    <h1 class="header__title">{title}</h1>
+    {:else}
     <h3 class="header__title">{title}</h3>
+    {/if}
     <div class="header__divider"></div>
   </div>
 </FadeIn>

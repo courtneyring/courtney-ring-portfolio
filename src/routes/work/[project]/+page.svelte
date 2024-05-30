@@ -16,9 +16,6 @@
   $: nextIdx = currentIdx == copy.length - 1 ? 0 : currentIdx + 1;
   $: nextProject = copy[nextIdx];
 
-  const routeToNext = () => {
-    goto(`/work/${nextProject.id}`);
-  };
 </script>
 
 <svelte:head>

@@ -17,7 +17,8 @@
         {
           "layout": "video",
           "video": "mache.mp4",
-          "backgroundColor": "#191c23"
+          "backgroundColor": "#191c23", 
+          "placeholder": "mache-placeholder.png"
         },
         {
           "layout": "text",
@@ -42,7 +43,8 @@
         {
           "layout": "video",
           "video": "bronco.mp4",
-          "backgroundColor": "#ebeced"
+          "backgroundColor": "#ebeced", 
+          "placeholder": "bronco-placeholder.png"
         }
       ]
     },

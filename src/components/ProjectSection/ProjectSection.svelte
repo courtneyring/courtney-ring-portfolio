@@ -19,6 +19,7 @@
       contentId={content.id}
       filename={section.video}
       embed={section.videoEmbed}
+      placeholder={section.placeholder}
     />
   {:else if section.layout == 'background-image'}
     <Background />

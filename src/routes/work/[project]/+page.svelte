@@ -11,6 +11,7 @@
 
   export let data;
   $: id = data.projectId;
+  $: console.log(id)
   $: currentIdx = copy.findIndex((project) => project.id == id);
   $: content = copy[currentIdx];
   $: nextIdx = currentIdx == copy.length - 1 ? 0 : currentIdx + 1;

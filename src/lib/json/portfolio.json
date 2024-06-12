@@ -57,6 +57,7 @@
     "featured": true,
     "body": "<p>The simple act of “Driving While Black” in America can quickly turn into an experience fraught with tension, fear, and the looming threat of violence. Studies consistently reveal that black motorists are more likely to experience aggressive tactics, excessive use of force, and even lethal violence compared to their white counterparts. To bring awareness to this issue, Critical Mass partnered with Goodby, Silverstein & Partners to create an experience that allows users to step into the shoes of Black drivers. Debuted at the Detroit Auto Show 2023, CM and GSP unveiled a concept car to highlight the double standards Black people experience. The goal was to spark conversation and promote change across the country.</p>",
     "heroImg": "hero2.webp",
+    "heroImgMobile": "background-mobile.webp",
     "heroPos": "50% 35%",
     "tileImg": "hero2.webp",
     "employer": "Critical Mass",
@@ -78,7 +79,7 @@
       {
         "layout": "background-image",
         "backgroundImage": "background-img.webp",
-        "backgroundPosX":  42,
+        "backgroundPosX":  39,
         "backgroundPosY": 50
       },
       {
@@ -103,7 +104,7 @@
     "featured": true,
     "body": "<p>For CES 2020, Canon had plans to create a flashy centralized fashion show lined with cameras as a fun way to demo their offerings. However, they wanted to make the experience more personalized, so we added a digital component to the activation that would allow the participants to save their images to their Canon Passport profile. With this functionality, users were able to revisit the photos after the show, and this also allowed Canon to collect leads from those who visited the stand.</p><p>In addition to increasing participant engagement and lead generation, this application also showcased the abilities of Canon's Software Development Kit. In our particular case, we used it to send data between the cameras and nearby tablets, as well as control the cameras from the tablets themselves.</p>",
     "heroImg": "hero.png",
-    "heroPos": "59% 50%",
+    "heroPos": "76% 50%",
     "tileImg": "tile.png",
     "skills": "Angular, Scss, C++, Nodejs",
     "employer": "Imagination",
@@ -112,7 +113,9 @@
     "sections": [
       {
         "layout": "background-image",
-        "backgroundImage": "content-image-1.png"
+        "backgroundImage": "content-image-1.png", 
+        "backgroundPosX": 49, 
+        "backgroundPosY": 0
       },
       {
         "layout": "text",
@@ -138,7 +141,7 @@
     "employer": "Imagination",
     "client": "Aptiv",
     "role": "Frontend Developer",
-    "heroPos": "84% 90%",
+    "heroPos": "47% 90%",
     "heroImg": "hero.jpg",
     "tileImg": "tile.jpg",
     "body": "<p>As a result of the Covid-19 pandemic, many companies had to switch their strategies from physical, in-person events to online virtual events. Aptiv was no exception. To stand out in the sea of virtual events that took over the industry, we created an augmented reality tool to showcase Aptiv’s complex offerings and bring a surprise-and-delight factor to the regular virtual meeting.</p><p>The goal was to mimic a hands-on experience, giving users a 360 degree view of their smart vehicle architecture and allowing them to click on hotspots to zero in on individual parts of the technology. Each hotspots features a 3D model for users to manipulate on their own screen or launch in AR to see them in their own environment.</p>",
@@ -157,7 +160,9 @@
       },
       {
         "layout": "background-image",
-        "backgroundImage": "mockup-2.png"
+        "backgroundImage": "mockup-2.png", 
+        "backgroundPosX": 69,
+        "backgroundPosY": 69
       },
       {
         "layout": "text",
@@ -268,7 +273,7 @@
       {
         "layout": "background-image",
         "backgroundImage": "content-background.png",
-        "backgroundPosX": 50,
+        "backgroundPosX": 80,
         "backgroundPosY": 50
       },
       {

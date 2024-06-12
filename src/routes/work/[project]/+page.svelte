@@ -9,6 +9,9 @@
   import arrowRight from '$lib/images/arrow-right.svg';
   import FadeIn from '../../../components/animations/FadeIn.svelte';
 
+  let innerWidth = 0
+  $: heroImage = innerWidth < 768 && content.heroImgMobile ? content.heroImgMobile : content.heroImg;
+
   export let data;
   $: id = data.projectId;
   $: console.log(id)
@@ -24,11 +27,13 @@
   <meta name="Courtney Ring Portfolio" content="Courtney Ring Portfolio" />
 </svelte:head>
 
+<svelte:window bind:innerWidth />
+
 <!-- Hero -->
 
 <div
   class="work__hero"
-  style="background-image: url('/work/{id}/{content.heroImg}'); background-position: {content.heroPos}; background-size: cover"
+  style="background-image: url('/work/{id}/{heroImage}'); background-position: {content.heroPos}; background-size: cover"
 />
 
 <!-- Intro -->

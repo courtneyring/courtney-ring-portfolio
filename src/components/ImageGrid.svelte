@@ -1,10 +1,37 @@
 <script>
   export let tiles;
+
+  import { onMount, onDestroy } from "svelte";
+  import { gsap } from "gsap/dist/gsap";
+  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  let node;
+  let tileRefs = [];
+
+  onMount(() => {
+    for (let [idx, tileRef] of Object.entries(tileRefs)) {
+      gsap.from(tileRef, {
+        delay: 0.15*idx, 
+        opacity: 0,
+        y: "-10vh",
+        duration: 0.5,
+      });
+    }
+  });
+
+  onDestroy(() => {
+    let triggers = ScrollTrigger.getAll();
+    triggers.forEach((trigger) => {
+      trigger.kill();
+    });
+  });
 </script>
 
 <div class="grid__container">
-  {#each tiles as tile}
-    <a class="grid__tile" href="/work/{tile.id}">
+  {#each tiles as tile, i}
+    <a class="grid__tile" href="/work/{tile.id}" bind:this={tileRefs[i]}>
       <div class="grid__tile-text">{tile.title}</div>
       <div
         class="grid__tile-image"
@@ -31,7 +58,7 @@
     width: 100%;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       padding-bottom: 100%;
     }
@@ -71,7 +98,7 @@
       height: 100%;
       width: 100%;
       display: block;
-      content: ' ';
+      content: " ";
       background: #1c1d25;
       opacity: 0;
       z-index: 2;

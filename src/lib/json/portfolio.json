@@ -93,6 +93,12 @@
         "layout": "image",
         "image": "award.jpeg",
         "backgroundColor": "#191c23"
+      },
+      {
+        "backgroundImage": "placeholder-background.png",
+        "layout": "quote",
+        "quote": "There's a double standard Black people face when being stopped by police that almost nobody sees. DWB illustrates the reality so many of us face while driving. We have a duty, responsibility and obligation to tell these stories in the most real and provocative way we can think of.",
+        "speaker": "Anthony O’Neill, GS&P creative director"
       }
     ]
   },

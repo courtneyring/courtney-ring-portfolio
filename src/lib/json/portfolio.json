@@ -55,7 +55,7 @@
     "client": "Courageous Conversation Global Foundation",
     "subtitle": "lorem ipsum",
     "featured": true,
-    "body": "<p>The simple act of “Driving While Black” in America can quickly turn into an experience fraught with tension, fear, and the looming threat of violence. Studies consistently reveal that black motorists are more likely to experience aggressive tactics, excessive use of force, and even lethal violence compared to their white counterparts. To bring awareness to this issue, Critical Mass partnered with Goodby, Silverstein & Partners to create an experience that allows users to step into the shoes of Black drivers. Debuted at the Detroit Auto Show 2023, CM and GSP unveiled a concept car to highlight the double standards Black people experience. The goal was to spark conversation and promote change across the country.</p>",
+    "body": "<p>In America, the simple act of Driving While Black can be fraught with tension, fear, and even the threat of violence. Studies consistently show that Black motorists are disproportionately subjected to aggressive policing tactics, excessive use of force, and fatal encounters compared to their white counterparts. Despite ongoing conversations about racial injustice, these systemic issues persist, often with devastating consequences. Traditional awareness campaigns have struggled to break through the noise and create lasting impact, requiring a bold, disruptive approach.</p>",
     "heroImg": "hero2.webp",
     "heroImgMobile": "background-mobile.webp",
     "heroPos": "50% 35%",
@@ -71,8 +71,8 @@
       },
       {
         "layout": "text",
-        "title": "",
-        "body": "<p>The centerpiece of the experience was an augmented reality activation that allowed users to explore the prototyped vehicle in a 3D space. At the Detroit Auto Show, this created the illusion that this vehicle was on display along with all the other cars physically at the show. Paired with the experience is a video that is presented as a hype reel, narrating through all the vehicle’s stand-out features. But the underlying message is that these “safety features” such as transparent doors to “eliminate reasonable suspicion” and a steering wheel that “keeps hands visible at all times” are the lengths that Black drivers need to go to in order to feel safe driving in America today.</p>",
+        "title": "The Mission",
+        "body": "<p>Critical Mass, in partnership with Goodby Silverstein & Partners, set out to create an experience that would confront this issue in a way that couldn’t be ignored. The objective was to force audiences—particularly those who may not have personally experienced racial bias in policing—to step into the reality of Black drivers. To achieve this, the activation needed to be both visually striking and emotionally resonant—a moment that couldn’t be ignored.</p>",
         "backgroundColor": "#20232c",
         "textColor": "#ebeced"
       },
@@ -84,8 +84,8 @@
       },
       {
         "layout": "text",
-        "title": "",
-        "body": "<p>The campaign won a series of awards including two Anthem Awards in DE&I/Awareness, two Andy Awards in Craft and Idea, three Webby Awards, and four Clios including the Grand in Experience/Activation/Guerilla.</p>",
+        "title": "The Approach",
+        "body": "<p>At the 2023 Detroit Auto Show, an event known for showcasing the latest automotive innovations, the team introduced a concept car designed specifically to highlight the double standards Black drivers face. The campaign centered around an augmented reality activation that allowed users to explore the vehicle in a 3D space, creating the illusion that it was physically present alongside other cars at the show. Accompanying the AR experience was a high-production video, presented in the style of a luxury car launch, narrating the vehicle’s standout “safety features.” However, the deeper message became clear—these features, such as transparent doors to “eliminate reasonable suspicion” and a steering wheel that “keeps hands visible at all times,” were not innovations but extreme survival mechanisms. The campaign used digital storytelling and guerrilla marketing tactics to deliver a powerful social commentary, forcing audiences to confront the reality of racial disparities in policing.</p>",
         "backgroundColor": "#49629b",
         "textColor": "#ffffff"
       },
@@ -93,6 +93,13 @@
         "layout": "image",
         "image": "award.jpeg",
         "backgroundColor": "#191c23"
+      },
+      {
+        "layout": "text",
+        "title": "The Outcome",
+        "body": "<p>The Driving While Black activation sparked immediate discussion at the auto show and beyond, using immersive storytelling and interactive technology to bring a harsh reality to life. The campaign received widespread recognition, winning top industry awards, including: <ul><li><strong>Cannes Lions – Silver</strong> in Digital Craft for Metaverse, New Realities & Emerging Tech</li><li><strong>Cannes Lions – Bronze</strong> in Film Lions for Social Behavior & Cultural Insight</li><li><strong>Clio Awards – Grand Clio</strong> in Experience/Activation/Guerrilla</li><li><strong>Anthem Awards – Gold</strong> in DE&I Awareness</li><li><strong>Webby Awards – Winner</strong> for Best DE&I Website and Best Social Campaign for Diversity, Equity & Inclusion</li><li><strong>Andy Awards - Gold</strong> in Craft & Idea</li></ul> More importantly, it forced audiences to confront systemic racism in an unexpected but deeply impactful way, turning a routine auto show experience into a call for change.</p>",
+        "backgroundColor": "#49629b",
+        "textColor": "#ffffff"
       },
       {
         "backgroundImage": "placeholder-background.png",

@@ -64,9 +64,10 @@ gsap.registerPlugin(ScrollTrigger);
   .card-block {
     display: flex;
     justify-content: space-between;
-    padding: 100px 0px;
+    margin-bottom: 40px;
     width: 100%;
     flex-direction: column;
+    
   }
 
   :global([ref='cardRef']) {
@@ -79,6 +80,7 @@ gsap.registerPlugin(ScrollTrigger);
 
   @media (min-width: 922px) {
     .card-block {
+      padding: 100px 0px;
       flex-direction: row;
       &.reverse {
         flex-direction: row-reverse;

@@ -101,6 +101,7 @@
   .work__content {
     display: flex;
     flex-direction: column;
+    color: white;
   }
 
   .work__block {
@@ -108,8 +109,8 @@
   }
 
   .work__body {
-    color: $color-purple-light;
-    font-size: 16px;
+    color: white;
+    font-size: 18px;
     font-weight: 400;
     line-height: 30px;
     margin-bottom: 30px;

@@ -24,14 +24,14 @@
     flex-direction: column;
     align-items: center;
     min-height: 100%;
-    padding-top: 8%;
+    // padding-top: 8%;
     margin-bottom: 30px;
   }
 
   h4 {
     color: white;
-    font-size: 65px;
-    line-height: 65px;
+    font-size: 40px;
+    line-height: 45px;
     margin-bottom: 30px;
     text-align: center;
   }
@@ -40,6 +40,7 @@
     font-size: 20px;
     color: white;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   @media (min-width: 992px) {
@@ -48,6 +49,7 @@
       margin-bottom: 0px;
       padding-top: 4%;
       padding-right: 10px;
+      text-align: left;
 
       &.right-aligned {
         align-items: flex-end;

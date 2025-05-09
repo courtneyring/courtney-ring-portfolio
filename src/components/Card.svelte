@@ -22,7 +22,7 @@
   .card {
     border-radius: 10px;
     display: flex;
-    height: 33.3vw;
+    height: 300px;
     // width: 50vw;
     overflow: hidden;
   }
@@ -32,5 +32,29 @@
     height: 100%;
     background-position: center;
     background-size: cover;
+  }
+
+  @media(min-width: 768px) {
+    .card {
+      height: 400px;
+    }
+  }
+
+  @media(min-width: 992px) {
+    .card {
+      height: 700px;
+    }
+  }
+
+  @media(min-width: 1200px) {
+    .card {
+      height: 1000px;
+    }
+  }
+
+    @media(min-width: 1920px) {
+    .card {
+      height: 1600px;
+    }
   }
 </style>

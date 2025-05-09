@@ -24,16 +24,18 @@
   }
 
   .landing__body {
-    color: $color-purple-light;
+    color: white;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .landing__pic {
     background-image: url('/profile-image.jpg');
-    background-size: 120%;
-    background-position: 0% 100%;
+    background-size: 180%;
+    background-position: 32% 70%;
     border-radius: 600px;
     height: 300px;
     margin: 0 auto;
@@ -44,7 +46,7 @@
     .landing__body {
       font-size: 20px;
       line-height: 34px;
-      display: flex;
+      flex-direction: row;
     }
 
     .landing__pic {

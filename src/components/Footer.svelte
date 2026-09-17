@@ -2,7 +2,7 @@
   import liIcon from '$lib/images/linkedin.svg';
   import githubIcon from '$lib/images/github.svg';
   import emailIcon from '$lib/images/paper-plane.svg';
-  import logo from '$lib/images/final-filled-edit.svg';
+  import logo from '$lib/images/ch-logo.svg';
 </script>
 
 <footer>

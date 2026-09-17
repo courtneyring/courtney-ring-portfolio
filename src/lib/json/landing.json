@@ -1,10 +1,10 @@
 {
   "hero": {
-    "eyebrow": ["Technology Lead", "Software Engineer"],
-    "title": "Courtney Ring"
+    "eyebrow": ["Technology Lead"],
+    "title": "Courtney Haberlach"
   },
   "about": {
     "title": "About Me",
-    "paragraph": "<p>Hi there, I'm Courtney, a software developer, creative technologist, and tech lead based in New York City. I've worked in the industry for nine years with roles ranging from individually contributing as a developer to managing teams as a lead. My expertise lies at the intersection of design and technology, which gives me a unique set of skills within the tech realm. I can be the digital expert during the ideation process, the prototyper during discovery, and the point person during project development. I thrive on figuring out new solutions and exploring emerging tech to ultimately deliver experiences that give users that true surprise-and-delight moment.</p>"
+    "paragraph": "<p>Hi there, I'm Courtney, a  tech lead based in New York City. I've worked in the industry for nine years with roles ranging from individually contributing as a developer to managing teams as a lead. My expertise lies at the intersection of design and technology, which gives me a unique set of skills within the tech realm. I can be the digital expert during the ideation process, the prototyper during discovery, and the point person during project development. I thrive on figuring out new solutions and exploring emerging tech to ultimately deliver experiences that give users that true surprise-and-delight moment.</p>"
   }
 }

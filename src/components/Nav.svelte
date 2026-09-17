@@ -2,7 +2,7 @@
   import { onDestroy, onMount } from 'svelte';
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
-  import logo from '$lib/images/final-filled-edit.svg';
+  import logo from '$lib/images/ch-logo.svg';
 
   let lastScrollY = browser && window.scrollY;
   $: direction = 'up';

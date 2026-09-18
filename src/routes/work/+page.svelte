@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-  <title>Courtney Ring | Work</title>
-  <meta name="Courtney Ring | Work" content="Courtney Ring | Work" />
+  <title>Courtney Haberlach | Work</title>
+  <meta name="Courtney Haberlach | Work" content="Courtney Haberlach | Work" />
 </svelte:head>
 
 <section>

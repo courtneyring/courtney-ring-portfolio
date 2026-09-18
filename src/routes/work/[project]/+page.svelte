@@ -23,8 +23,8 @@
 </script>
 
 <svelte:head>
-  <title>Courtney Ring | Work | {content.title}</title>
-  <meta name="Courtney Ring Portfolio" content="Courtney Ring Portfolio" />
+  <title>Courtney Haberlach | Work | {content.title}</title>
+  <meta name="Courtney Haberlach Portfolio" content="Courtney Haberlach Portfolio" />
 </svelte:head>
 
 <svelte:window bind:innerWidth />

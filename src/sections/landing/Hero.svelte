@@ -6,50 +6,48 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-  let letters = content.hero.title.split('');
-  letters.find((letter) => letter == '');
+  // let letters = content.hero.title.split('');
+  // letters.find((letter) => letter == '');
 
-  const fromPos = [
-    { scale: 22, x: '-300vw' },
-    { scale: 22, y: '-300vh' },
-    { scale: 22, y: '300vh', x: '-20vw' },
-    { scale: 22, y: '-300vh', x: '-50vw' },
-    { scale: 22, y: '-300vh', x: '100vw' },
-    { scale: 22, y: '300vh', x: '20vw' },
-  ];
+  // const fromPos = [
+  //   { scale: 22, x: '-300vw' },
+  //   { scale: 22, y: '-300vh' },
+  //   { scale: 22, y: '300vh', x: '-20vw' },
+  //   { scale: 22, y: '-300vh', x: '-50vw' },
+  //   { scale: 22, y: '-300vh', x: '100vw' },
+  //   { scale: 22, y: '300vh', x: '20vw' },
+  // ];
 
-  onMount(() => {
-    let tl = gsap.timeline({ ease: 'power1.inOut' });
-    for (let [idx, val] of letters.entries()) {
-      if (letters[idx] == ' ') continue;
-      tl.from(
-        `.hero__text > h1 > span:nth-child(${idx + 1})`,
-        fromPos[idx % fromPos.length],
-        '<+0.1',
-      );
-    }
-    tl.fromTo(
-      'h2',
-      { opacity: 0, y: '1vh' },
-      { opacity: 1, duration: 0.5, ease: 'power1.inOut', y: 0 },
-    );
+  // onMount(() => {
+  //   let tl = gsap.timeline({ ease: 'power1.inOut' });
+  //   for (let [idx, val] of letters.entries()) {
+  //     if (letters[idx] == ' ') continue;
+  //     tl.from(
+  //       `.hero__text > h1 > span:nth-child(${idx + 1})`,
+  //       fromPos[idx % fromPos.length],
+  //       '<+0.1',
+  //     );
+  //   }
+  //   tl.fromTo(
+  //     'h2',
+  //     { opacity: 0, y: '1vh' },
+  //     { opacity: 1, duration: 0.5, ease: 'power1.inOut', y: 0 },
+  //   );
 
-  });
+  // });
 
-  onDestroy(() => {
-    let triggers = ScrollTrigger.getAll();
-    triggers.forEach((trigger) => {
-      trigger.kill();
-    });
-  });
+  // onDestroy(() => {
+  //   let triggers = ScrollTrigger.getAll();
+  //   triggers.forEach((trigger) => {
+  //     trigger.kill();
+  //   });
+  // });
 </script>
 
 <section class="hero">
   <div class="hero__text">
     <h1>
-      {#each letters as letter}
-        <span>{letter}</span>
-      {/each}
+     Courtney Haberlach
     </h1>
     <h2>
       {#each content.hero.eyebrow as eyebrow}
@@ -81,29 +79,30 @@ gsap.registerPlugin(ScrollTrigger);
     position: absolute;
     top: 34%;
 
-    & > h2 {
+
+
+    & > h2 span {
       color: $color-white;
-      font-size: 15px;
+      font-size: 30px;
       font-weight: 400;
-      letter-spacing: 3px;
+      letter-spacing: 5px;
       text-transform: uppercase;
 
-      & span {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      // & span {
+      //   display: flex;
+      //   flex-direction: column;
+      //   align-items: center;
 
-        &:not(:last-child)::after {
-          content: '•';
-          margin: 0px 10px;
-        }
-      }
+      //   &:not(:last-child)::after {
+      //     content: '•';
+      //     margin: 0px 10px;
+      //   }
+      // }
     }
 
     & > h1 {
       color: $color-white;
       font-size: 45px;
-      font-weight: 600;
       text-align: center;
       display: flex;
 

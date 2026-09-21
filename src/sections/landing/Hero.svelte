@@ -80,13 +80,19 @@ gsap.registerPlugin(ScrollTrigger);
     top: 34%;
 
 
+    & > h2 {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
 
     & > h2 span {
       color: $color-white;
-      font-size: 30px;
+      font-size: 20px;
       font-weight: 400;
-      letter-spacing: 5px;
+      letter-spacing: 3px;
       text-transform: uppercase;
+      text-align: center;
 
       // & span {
       //   display: flex;
@@ -127,13 +133,14 @@ gsap.registerPlugin(ScrollTrigger);
     .hero__text {
       & > h2 {
         display: block;
-        font-size: 14px;
-        letter-spacing: 3px;
+      
         flex-direction: row;
         display: flex;
 
         & span {
           flex-direction: row;
+          font-size: 14px;
+          letter-spacing: 3px;
         }
       }
 
@@ -153,8 +160,8 @@ gsap.registerPlugin(ScrollTrigger);
     .hero__text {
       margin: 0px;
 
-      & > h2 {
-        font-size: 17px;
+      & > h2 span{
+        font-size: 26px;
         letter-spacing: 3px;
       }
 
@@ -172,8 +179,8 @@ gsap.registerPlugin(ScrollTrigger);
 
   @media (min-width: 1200px) {
     .hero__text {
-      & > h2 {
-        font-size: 20px;
+      & > h2 span {
+        font-size: 30px;
         letter-spacing: 5px;
       }
       & > h1 {
@@ -188,8 +195,8 @@ gsap.registerPlugin(ScrollTrigger);
   }
   @media (min-width: 1500px) {
     .hero__text {
-      & > h2 {
-        font-size: 26px;
+      & > h2 span {
+        font-size: 36px;
         letter-spacing: 5px;
       }
       & > h1 {

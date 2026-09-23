@@ -47,9 +47,9 @@
           <div class="work__body">{@html content.body}</div>
         </FadeIn>
       </div>
-      <div class="work__block">
+      <!-- <div class="work__block">
         <FactBox {content} />
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -106,6 +106,8 @@
 
   .work__block {
     width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .work__body {
@@ -161,17 +163,17 @@
       flex-direction: row;
     }
 
-    .work__block {
-      &:first-child {
-        padding-right: 20px;
-        width: 60%;
-      }
+    // .work__block {
+    //   &:first-child {
+    //     padding-right: 20px;
+    //     width: 60%;
+    //   }
 
-      &:last-child {
-        padding-left: 20px;
-        width: 40%;
-      }
-    }
+    //   &:last-child {
+    //     padding-left: 20px;
+    //     width: 40%;
+    //   }
+    // }
 
     .work__body {
       margin-bottom: 0px;
